@@ -1,0 +1,35 @@
+.bg{
+    background-color: white;
+}
+#center{
+    text-align: center;
+}
+.button1{
+    box-sizing: unset!important;
+    align-items: center;
+    display: inline-block;
+    padding: 10px 50px;
+    margin:  320px 70px;
+    border: 3px solid white;
+    font-weight:  bold;
+    color: white;
+    text-align: center; 
+    background-color: rgba( 255, 255, 255, 0 );
+}    
+.button1:hover {
+    background-color:white;
+    color:black;
+}
+.submit{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+a, a:hover, a:visited, a:link{
+    text-decoration: none;
+    color: black;
+}
+.search{
+    padding-bottom: 0.7vh;
+}
+
