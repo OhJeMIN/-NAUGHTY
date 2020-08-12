@@ -32,4 +32,10 @@ a, a:hover, a:visited, a:link{
 .search{
     padding-bottom: 0.7vh;
 }
+.search2{
+    width:80%;
+}
+.down{
+    padding-top: 15vh;
+}
 
