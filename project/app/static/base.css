@@ -1,3 +1,67 @@
-h1{
-    color: aqua;
+@font-face{
+    font-family:'Bodoni MT'; 
+    src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+    url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+    url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
 }
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+@font-face{
+    font-family:'YDIYGO320'; 
+    src:url("{% static 'fonts/YDIYGO320.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕320.eot' %}") format('embedded-opentype');
+}
+@font-face{
+    font-family:'YDIYGO330'; 
+    src:url("{% static 'fonts/YDIYGO330.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕330.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO340'; 
+    src:url("{% static 'fonts/YDIYGO340.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕340.eot' %}") format('embedded-opentype');
+}
+
+.footer{ 
+    width: 100%;
+    margin:20px;
+}
+
+#btn{
+    background:none;
+    border:0px;
+}
+
+#navbar-brand-txt {
+    color:#634933;
+    font-family:'Bodoni MT';
+    font-size:40px;
+}
+
+.nav-link{
+    color:#634933;
+    font-family:'YDIYGO340'; 
+}
+
+.material-icons {
+    color:#634933;
+}
+
+.fa{
+    color:#634933;
+}
+
+.dropdown-menu{
+    border-color: #634933;
+}
+
+.dropdown-item{
+    color:#634933;
+    font-family:'YDIYGO340'; 
+}
+
