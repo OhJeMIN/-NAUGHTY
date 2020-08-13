@@ -1,0 +1,95 @@
+@font-face{
+    font-family:'Bodoni MT'; 
+    src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+    url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+    url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
+}
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO340'; 
+    src:url("{% static 'fonts/YDIYGO340.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕340.eot' %}") format('embedded-opentype');
+}
+
+body{
+    margin: 0;
+    background-color:#424242;
+}
+
+.container-fluid{
+    width:100vw;
+    padding-left:0;
+    padding-right:0;
+    margin-right:0;
+}
+
+.card-deck{
+    height: 50%;
+    width:100%;
+    padding: 3%;
+    padding-bottom: 4%;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #000000;
+}
+
+.card {
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    color: snow;
+    background-color: #000000;
+    border-color: snow;
+    font-family:'YDIYGO310'; 
+}
+
+.card-title{
+    font-family:'YDIYGO340'; 
+    font-size:40px;
+}
+
+.card-body {
+    padding: 60px 0;
+}
+
+.row{
+    margin:0 auto;
+}
+
+.input{
+    border-radius: 10px;
+    margin: 5px;
+    width: 90%;
+    height: 30px;
+    color:snow;
+    background-color: #000000;
+}
+
+.input::placeholder{
+    color:snow;
+}
+
+.btn{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 42.5%;
+    height: 30px;
+    color:snow;
+}
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+
+.brand-txt{
+    color:#f4ddc2;
+    font-family:'Bodoni MT';
+    font-size:80px;
+}
