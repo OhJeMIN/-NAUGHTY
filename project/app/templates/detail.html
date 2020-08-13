@@ -1,0 +1,57 @@
+<head>
+
+</head>
+
+{%extends 'base.html' %}
+
+{%block contents%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'hong.css'%}">
+<div class="main-box">
+    <div class="title">
+        <h3>MY PAGE</h3>
+    </div>
+    <div class="block">
+        <div class="col-2 inline-block">
+            <div class="block">
+                <img src="https://img.insight.co.kr/static/2019/09/12/700/6oy56939yzebbr1up3kx.jpg" width="100em"
+                    height="100em" class="person">
+            </div>
+            <div class="name block">
+                <h5>ME</h5>
+            </div>
+        </div>
+        <div class="heart col-1 inline-block">
+            <div class="block">
+                <img src="https://data.ac-illust.com/data/thumbnails/ff/ffd973d3ef38597af1817edb3c18887a_t.jpeg"
+                    width="80em" height="80em" class="vertical-center">
+            </div>
+            <div class="block">
+                <p style="color: white;">공백용</p>
+            </div>
+        </div>
+        <div class=" col-2 inline-block">
+            <div class="block">
+                <img src="https://pbs.twimg.com/profile_images/730269221309931520/IyF_R96M_400x400.jpg" width="100em"
+                    height="100em" class="person">
+            </div>
+            <div class="name block">
+                <h5>YOU</h5>
+            </div>
+
+        </div>
+    </div>
+   
+    <div class="detail-category block" style=" margin-bottom:6em; ">
+       
+        <ul class="list-group list-group-horizontal mx-auto" style="width:fit-content; margin-top:3em;" >
+            <a href="" class="hover"><li class="list-group-item list" style="border-radius: 10px 0% 0% 10px;">프로필</li></a>
+            <a href="{% url 'order' %}" class="hover"><li class="list-group-item list" style="border-radius: 0%;">주문내역</li></a>
+            <a href="" class="hover"> <li class="list-group-item list" style="border-radius: 0%;">게시판</li></a>
+            <a href="" class="hover"> <li class="list-group-item list" style="border-radius: 0% 10px 10px 0%;">문의</li></a>
+          </ul>
+    </div>
+
+</div>
+
+{%endblock%}
