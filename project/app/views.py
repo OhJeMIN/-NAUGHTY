@@ -6,3 +6,12 @@ def index(request):
 
 def item(request):
     return render(request, 'item.html')
+
+def login(request):
+    return render(request, 'login.html')
+    
+def detail(request):
+    return render(request, 'detail.html')
+
+def order(request):
+    return render(request, 'order.html')

@@ -1,3 +1,145 @@
-h1{
-    color: aqua;
+@font-face{
+    font-family:'Bodoni MT'; 
+    src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+    url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+    url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
+}
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+@font-face{
+    font-family:'YDIYGO320'; 
+    src:url("{% static 'fonts/YDIYGO320.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕320.eot' %}") format('embedded-opentype');
+}
+@font-face{
+    font-family:'YDIYGO330'; 
+    src:url("{% static 'fonts/YDIYGO330.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕330.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO340'; 
+    src:url("{% static 'fonts/YDIYGO340.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕340.eot' %}") format('embedded-opentype');
+}
+
+.footer{ 
+    width: 100%;
+    margin:20px;
+    font-family:'YDIYGO320'; 
+}
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+
+#btn{
+    background:none;
+    border:0px;
+}
+
+#navbar-brand-txt {
+    color:#634933;
+    font-family:'Bodoni MT';
+    font-size:40px;
+}
+
+.nav-link{
+    color:#634933;
+    font-family:'YDIYGO340'; 
+}
+
+.material-icons {
+    color:#634933;
+}
+
+.fa{
+    color:#634933;
+}
+
+.dropdown-menu{
+    border-color: #634933;
+}
+
+.dropdown-item{
+    font-family:'YDIYGO340';
+    border-bottom: 1px solid #6E6E6E;
+    width:90%;
+    margin:auto;
+    padding-left:5px;
+}
+
+#main-menu {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    font-family:'YDIYGO340';
+    font-size:24px;
+}
+
+.sub-menu {
+    margin:0;
+    padding:0;
+    padding-left:10px;
+    list-style-type:none;
+    opacity: 0;
+    display: none;
+    text-align: left;
+    font-family:'YDIYGO320';
+    font-size:18px;
+}
+
+#main-menu>li:hover #woman-menu {
+    opacity:1;
+    display:block;
+}
+
+#main-menu>li:hover #man-menu {
+    opacity:1;
+    display:block;
+}
+
+#main-menu>li:hover #all-menu {
+    opacity:1;
+    display:block;
+}
+
+.sub-menu2 {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    opacity: 0;
+    display: none;
+    text-align: left;
+    font-family:'YDIYGO310';
+    font-size:13px;
+}
+
+#all-menu>li:hover #woman-menu2 {
+    opacity:1;
+    display:block;
+}
+
+#all-menu>li:hover #man-menu2 {
+    opacity:1;
+    display:block;
+}
+
+.sub-menu-text {
+    display:block;
+    border-bottom: 1px solid #D8D8D8;
+    width: 95%;
+    padding: 10px 0;
+}
+
+.sub-menu-text2 {
+    display:block;
+    border-bottom: 1px solid #F2F2F2;
+    width: 95%;
+    padding: 10px 0;
+}
 }

@@ -1,0 +1,79 @@
+@font-face{
+    font-family:"YDIYGO350";
+    src: url('YDIYGO350.woff');
+}
+
+h1{
+    color: brown;
+}
+.main-box{
+    display: block;
+    float: center;
+    text-align: center;
+    border: solid;
+    border-color: #634933;
+    border-width: 0.1px;
+    border-radius: 2em;
+    margin: 4em;
+    margin-left: 6em;
+    margin-right: 6em;
+}
+.title{
+    text-align: center;
+    margin: 2em 0;
+}
+.inline-block{
+    display: inline-block;
+}
+.person{
+    border-radius: 50%;
+}
+.block{
+    display: block;
+    font-family:"YDIYGO350";
+    float: center;
+}
+.vertical-center{
+    vertical-align: center;
+    margin-top: -2em;
+}
+.list{
+    width: 18em;
+    height: 5em;
+    background-color: rgb(209, 202, 202);
+    font-weight: lighter;
+    padding: 25px 0;
+}
+
+.hover:link{
+    text-decoration: none;
+    color: black;
+}
+.hover:visited{
+    text-decoration: none;
+    color: black;
+}
+.hover:active{
+    text-decoration: none;
+    color: black;
+}
+.hover:hover{
+    text-decoration: none;
+    color: white;
+}
+.inlineblock{
+    margin: 2em;
+
+    display: inline-block;
+    text-align: right;
+    
+}
+.order-img{
+    position: absolute;
+    top:30px;
+    left: 90px;
+    z-index:1;
+    background-color: gray;
+    display:inline-block;
+    border-radius: 10px;
+}

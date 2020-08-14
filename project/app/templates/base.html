@@ -1,13 +1,84 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% load static %}
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
 <link rel="stylesheet" href="{% static 'base.css'%}">
 </head>
-
+<body>
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="navbar w-100 order-1 order-md-0">
+        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ul id="main-menu">
+                <li><a class="dropdown-item" href="#">WOMAN</a>
+                    <ul class="sub-menu" id="woman-menu">
+                        <li><a class="sub-menu-text" href="#">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">SET</a></li>
+                        <li><a class="sub-menu-text" href="#">BRA</a></li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">PANTIES</a></li>
+                    </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">MAN</a>
+                    <ul class="sub-menu" id="man-menu">
+                        <li><a class="sub-menu-text" href="#">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">TRUNKS</a></li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">BRIEFS</a></li>
+                    </ul>
+                </li>
+                <li><a class="dropdown-item" href="#" style="border-bottom:none;">COUPLE</a>
+                    <ul class="sub-menu" id="all-menu">
+                        <li><a class="sub-menu-text" href="#" style="border-top: 1px solid #6E6E6E;">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">WOMAN</a>
+                            <ul class="sub-menu2" id="woman-menu2">
+                                <li><a class="sub-menu-text2" href="#">ALL</a></li>
+                                <li><a class="sub-menu-text2" href="#">SET</a></li>
+                                <li><a class="sub-menu-text2" href="#">BRA</a></li>
+                                <li><a class="sub-menu-text2" href="#">PANTIES</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">MAN</a>
+                            <ul class="sub-menu2" id="man-menu2">
+                                <li><a class="sub-menu-text2" href="#" style="border-top: 1px solid #D8D8D8;">ALL</a></li>
+                                <li><a class="sub-menu-text2" href="#">TRUNKS</a></li>
+                                <li><a class="sub-menu-text2" href="#">BRIEFS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>    
+            </ul>
+        </div>
+    </div>
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="{% url 'index' %}" id="navbar-brand-txt">NAUGHTY</a>
+    </div>
+    <div class="navbar w-100 order-3">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">로그인</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">도움말</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'order' %}"><i class="material-icons">shopping_basket</i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 {%block contents%}
 
 {%endblock%}
+<div class="footer text-center">
+    <small>
+    아이티엑스코리아 유한회사 | 사업자 등록번호 : 120-88-14733 | 대표자 : ROMAY DE LA COLINA JOSE MANUEL | 서울시 강남구 영동대로 511 (삼성동, 트레이드타워 33층)<br>
+    | 대표번호 : 080-111-2222 | 이메일 : abcd@naver.com | 호스팅 서비스 사업자 : ITX Merken. B.V | 통신판매업신고 : 제2014-서울강남-02297(사업자정보확인) |<br>
+    개인정보취급방침 | 이용약관
+    </small>
+</div>
+</body>

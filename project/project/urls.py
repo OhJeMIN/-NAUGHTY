@@ -19,6 +19,9 @@ import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', app.views.index, name = 'index'),
-    path('item', app.views.item, name = 'item')
+    path('item', app.views.item, name = 'item'),
+    path('login', app.views.login, name='login'),
+    path('detail', app.views.detail, name = 'detail'),
+    path('order', app.views.order, name='order')
 ]
 
