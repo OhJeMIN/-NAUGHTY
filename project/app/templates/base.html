@@ -15,24 +15,58 @@
             <i class="fa fa-bars fa-2x"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <ul id="main-menu">
+                <li><a class="dropdown-item" href="#">WOMAN</a>
+                    <ul class="sub-menu" id="woman-menu">
+                        <li><a class="sub-menu-text" href="#">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">SET</a></li>
+                        <li><a class="sub-menu-text" href="#">BRA</a></li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">PANTIES</a></li>
+                    </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">MAN</a>
+                    <ul class="sub-menu" id="man-menu">
+                        <li><a class="sub-menu-text" href="#">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">TRUNKS</a></li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">BRIEFS</a></li>
+                    </ul>
+                </li>
+                <li><a class="dropdown-item" href="#" style="border-bottom:none;">COUPLE</a>
+                    <ul class="sub-menu" id="all-menu">
+                        <li><a class="sub-menu-text" href="#" style="border-top: 1px solid #6E6E6E;">ALL</a></li>
+                        <li><a class="sub-menu-text" href="#">WOMAN</a>
+                            <ul class="sub-menu2" id="woman-menu2">
+                                <li><a class="sub-menu-text2" href="#">ALL</a></li>
+                                <li><a class="sub-menu-text2" href="#">SET</a></li>
+                                <li><a class="sub-menu-text2" href="#">BRA</a></li>
+                                <li><a class="sub-menu-text2" href="#">PANTIES</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="sub-menu-text" href="#" style="border-bottom:none;">MAN</a>
+                            <ul class="sub-menu2" id="man-menu2">
+                                <li><a class="sub-menu-text2" href="#" style="border-top: 1px solid #D8D8D8;">ALL</a></li>
+                                <li><a class="sub-menu-text2" href="#">TRUNKS</a></li>
+                                <li><a class="sub-menu-text2" href="#">BRIEFS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>    
+            </ul>
         </div>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="#" id="navbar-brand-txt">NAUGHTY</a>
+        <a class="navbar-brand mx-auto" href="{% url 'index' %}" id="navbar-brand-txt">NAUGHTY</a>
     </div>
     <div class="navbar w-100 order-3">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">로그인</a>
+                <a class="nav-link" href="">로그인</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">도움말</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="material-icons">shopping_basket</i></a>
+                <a class="nav-link" href="{% url 'order' %}"><i class="material-icons">shopping_basket</i></a>
             </li>
         </ul>
     </div>
