@@ -1,19 +1,16 @@
 {%extends 'base.html' %}
 {%block contents%}
 {% load static %}
+<style>
+  .footer{
+    display: none;
+  }
+</style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
 <script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
-<div class="bg">
-  <div class="row">as</div>
+<div class="bg container-fluid w-100">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">   
     <div class="row justify-content-center">
-      <div class="col-md-auto">
-        <a class="carousel-control-prev" href="/" role="button" data-slide="prev">
-          <span class="h4 text-dark">MAN</span>
-          <span class="h4 text-dark"><</span>
-        </a>
-      </div>
-      <div class="col-9 ml-4 mr-5">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="d-block w-100" alt="...">            
@@ -25,20 +22,24 @@
             <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
-      </div>
-      <div class="col-md-auto">
-        <a class="carousel-control-next" href="/" role="button" data-slide="next">
-          <span class="h4 text-dark">></span>
-          <span class="h4 text-dark">WOMAN</span>
+        <a class="carousel-control-prev" href="/" role="button" data-slide="prev">
+          <span class="h4  mr-3">MAN</span>
+          <span class="h4 "><</span>
         </a>
+        <a class="carousel-control-next" href="/" role="button" data-slide="next">
+          <span class="h4 ">></span>
+          <span class="h4  ml-3">WOMAN</span>
+        </a>
+    </div>
+    <div class="carousel-caption d-none d-md-block mt-5 p-0">
+      <div class="row justify-content-center"> 
+        <a href="/" class="h4" style="color:#212529">COUPLE</a>
+      </div>
+      <div class="row justify-content-center"> 
+        <a href="/" class="h4" style="color:#212529"><i class="fas fa-chevron-down"></i></a>
       </div>
     </div>
-  </div>
-  <div class="row justify-content-center"> 
-    <a href="/" class="h4 text-dark">COUPLE</a>
-  </div>
-  <div class="row justify-content-center"> 
-    <a href="/" class="h4 text-dark"><i class="fas fa-chevron-down"></i></a>
   </div> 
 </div>
 {%endblock%}
+

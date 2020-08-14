@@ -1,3 +1,22 @@
+@font-face{
+    font-family:'Bodoni MT'; 
+    src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+    url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+    url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
+}
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO340'; 
+    src:url("{% static 'fonts/YDIYGO340.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕340.eot' %}") format('embedded-opentype');
+}
+
 .bg{
     background-color: white;
 }
@@ -37,5 +56,13 @@ a, a:hover, a:visited, a:link{
 }
 .down{
     padding-top: 15vh;
+}
+
+span{
+    color : rgba( 255, 255, 255, 0 )!important
+}
+span:hover{
+    text-decoration: none;
+    color:black;
 }
 
