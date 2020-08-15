@@ -15,6 +15,11 @@ def mypage(request):
 
 def order(request):
     return render(request, 'order.html')
+<<<<<<< HEAD
 
 def detail(request):
     return render(request, 'detail.html')
+=======
+def loding(request):
+    return render(request, 'loding.html')
+>>>>>>> f6c6dae258fb18aeac68a4e13461a84826973058
