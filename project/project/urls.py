@@ -21,14 +21,9 @@ urlpatterns = [
     path('', app.views.index, name = 'index'),
     path('item', app.views.item, name = 'item'),
     path('login', app.views.login, name='login'),
-<<<<<<< HEAD
     path('mypage', app.views.mypage, name = 'mypage'),
     path('order', app.views.order, name='order'),
-    path('detail', app.views.detail, name='detail')
-=======
     path('detail', app.views.detail, name = 'detail'),
-    path('order', app.views.order, name='order'),
     path('l', app.views.loding, name='loding')
->>>>>>> f6c6dae258fb18aeac68a4e13461a84826973058
 ]
 
