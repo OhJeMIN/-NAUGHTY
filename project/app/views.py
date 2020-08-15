@@ -21,6 +21,18 @@ def info1(request):
 
 def info2(request):
     return render(request, 'info2.html')
+
+def info3(request):
+    return render(request, 'info3.html')
+
+def info4(request):
+    return render(request, 'info4.html')
+
+def info5(request):
+    return render(request, 'info5.html')
+
+def survey(request):
+    return render(request, 'survey.html')
     
 def mypage(request):
     return render(request, 'mypage.html')
@@ -30,6 +42,6 @@ def order(request):
 
 def detail(request):
     return render(request, 'detail.html')
-    
+
 def loding(request):
     return render(request, 'loding.html')

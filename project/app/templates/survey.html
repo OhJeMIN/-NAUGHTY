@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survey.css'%}">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+            switch($(".test").text()){
+                case "1": 
+                $("p.question").text("두번째 질문");
+                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
+                $('#txt1').text("민트초코");
+                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
+                $('#txt2').text("ㅋㅋㅋㅋ");
+                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
+                $('#txt3').text("ㅇㅇ");
+                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
+                $('#txt4').text("ㅎㅎ");
+                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
+                $('#txt5').text("ㅅㅅ");
+                $(".test").text("2");
+                break;
+                case "2": 
+                $("p.question").text("세번째 질문");
+                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
+                $('#txt1').text("딸기");
+                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
+                $('#txt2').text("ㅋㅋㅋㅋ");
+                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
+                $('#txt3').text("ㅇㅇ");
+                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
+                $('#txt4').text("ㅎㅎ");
+                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
+                $('#txt5').text("ㅅㅅ");
+                $(".test").text("3");
+                break;
+                case "3": 
+                $("p.question").text("네번째 질문");
+                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
+                $('#txt1').text("졸려");
+                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
+                $('#txt2').text("ㅋㅋㅋㅋ");
+                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
+                $('#txt3').text("ㅇㅇ");
+                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
+                $('#txt4').text("ㅎㅎ");
+                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
+                $('#txt5').text("ㅅㅅ");
+                $(".test").text("4");
+                break;
+                case "4": 
+                $("p.question").text("다섯번째 질문");
+                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
+                $('#txt1').text("자자");
+                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
+                $('#txt2').text("ㅋㅋㅋㅋ");
+                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
+                $('#txt3').text("ㅇㅇ");
+                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
+                $('#txt4').text("ㅎㅎ");
+                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
+                $('#txt5').text("ㅅㅅ");
+                $(".test").text("5");
+                break;
+                case "5": 
+                break;
+            }
+            });
+
+            
+        });
+
+    </script>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
+        <div class="row">
+            <p class="test" style="margin:auto; color:snow; display:none;">1</p>
+            <p class="question">Q. 더운 여름날 당신의 이상형이 아이스크림을 먹고싶다고 합니다. <br> 당신은 어떤 맛을 고르시겠습니까?</p>
+            <div class="card-deck">
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">
+                    </a>  
+                    <div class="card-body">
+                        <div class="answer" id="txt1">요거트</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt2">요거트</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt3">요거트</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'img/5.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">요거트</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img5" src="{% static 'img/5.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt5">요거트</div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
