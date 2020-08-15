@@ -10,8 +10,11 @@ def item(request):
 def login(request):
     return render(request, 'login.html')
     
-def detail(request):
-    return render(request, 'detail.html')
+def mypage(request):
+    return render(request, 'mypage.html')
 
 def order(request):
     return render(request, 'order.html')
+
+def detail(request):
+    return render(request, 'detail.html')

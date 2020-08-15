@@ -70,10 +70,11 @@ h1{
 }
 .order-img{
     position: absolute;
-    top:30px;
+    top:90px;
     left: 90px;
     z-index:1;
     background-color: gray;
     display:inline-block;
     border-radius: 10px;
+    
 }
