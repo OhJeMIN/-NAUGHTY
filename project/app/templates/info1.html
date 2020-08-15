@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>info1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css'%}">
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
+
+        <div class="card-deck">
+            <div class="card" style="height: 350px;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <form action="" method="GET">
+                            <div class="card-text2">
+                                <h4>당신은 커플입니까?</h4>
+                            </div>
+                            <div>
+                                <input type="submit" name="couple" id="yes"class="btninfo border" style="line-height:0px; color:white" value="YES">
+                                <input type="submit" name="couple" id="no"class="btninfo border" style="line-height:0px; color:white" value="NO">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="height: 350px;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <form action="" method="GET">
+                            <div class="card-text2">
+                                <h4>어떤 커플입니까?</h4>
+                            </div>
+                            <div>
+                                <input type="submit" name="coupletype" id="mm"class="btninfo2 border" style="line-height:0px; color:white" value="남:남">
+                                <input type="submit" name="coupletype" id="mw"class="btninfo2 border" style="line-height:0px; color:white" value="남:여">
+                                <input type="submit" name="coupletype" id="ww"class="btninfo2 border" style="line-height:0px; color:white" value="여:여">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="height: 350px;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <form action="" method="GET">
+                            <div class="card-text2">
+                                <h4>당신의 성별은 무엇입니까?</h4>
+                            </div>
+                            <div>
+                                <input type="submit" name="sex" id="male"class="btninfo border" style="line-height:0px; color:white" value="남자">
+                                <input type="submit" name="sex" id="female"class="btninfo border" style="line-height:0px; color:white" value="여자">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>join2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -17,29 +17,32 @@
 
         <div class="card-deck">
             <div class="card p-0" style="border-style:none;">
-              <img class="card-img-top" src="https://i.pinimg.com/originals/18/e3/d9/18e3d9d98f780fb674921c0b3123d0dd.jpg" height="350px" alt="Card image cap">    
+              <img class="card-img-top" src="https://i.pinimg.com/originals/9c/81/94/9c819476dbb03d411a09a641bd0b4894.jpg" height="350px" alt="Card image cap">    
             </div>
-            <div class="card" style="height: 350px;">
+            <div class="card" style="height: 350px;"> 
               <div class="card-body">
-                <h3 class="card-title mt-4">Login</h3>
-                <form action="{% url 'info1' %}" method="GET">
+                <span class="card-title mt-4 pl-5 ml-4">Join
+                    <small class="mr-4 mt-4 pt-1" style="font-size:14px; float:right;">2/2단계</small>
+                </span>     
+                <form action="{% url 'login' %}" method="GET">
                     <div>
-                        <input class="input border" type="text" name="id" placeholder="  ID">
+                        <input class="input border" type="text" name="mail" placeholder="  MAIL  메일주소를 입력하세요">
                     </div>
                     <div>
-                        <input class="input border" type="password" name="pw" placeholder="  PW">
+                        <input class="input border" type="text" name="call" placeholder="  CALL  전화번호를 입력하세요">
+                    </div>
+                    <div class="checks">
+                        <input type="checkbox" name="infomation" id="infocheck">
+                        <label for="infocheck">개인정보 수집 동의</label>
                     </div>
                     <div>
-                        <a href="{% url 'join1' %}">
-                        <input type="button" class="btn border" style="line-height:0px; color:white" value="Join">
-                        </a>
-                        <input type="submit" class="btn border" style="line-height:0px; color:white" value="Enter">
+                        <input type="submit" class="btn border" style="line-height:0px; color:white" value="WELCOME">
                     </div>
                 </form>
               </div>
             </div>
             <div class="card p-0" style="border-style:none;">
-              <img class="card-img-top" src="https://i.pinimg.com/originals/ad/f5/28/adf5281bd5f4d73cc819920eb5ec2b30.jpg" height="350px" alt="Card image cap">
+              <img class="card-img-top" src="https://i.pinimg.com/originals/6a/ad/e6/6aade627b3161a8444bd213cbbfcf3cf.jpg" height="350px" alt="Card image cap">
             </div>
           </div>
 

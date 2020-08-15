@@ -22,6 +22,10 @@ urlpatterns = [
     path('item', app.views.item, name = 'item'),
     path('login', app.views.login, name='login'),
     path('detail', app.views.detail, name = 'detail'),
-    path('order', app.views.order, name='order')
+    path('order', app.views.order, name='order'),
+    path('join1', app.views.join1, name='join1'),
+    path('join2', app.views.join2, name='join2'),
+    path('info1', app.views.info1, name='info1'),
+    path('info2', app.views.info2, name='info1')
 ]
 
