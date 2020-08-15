@@ -59,10 +59,13 @@ a, a:hover, a:visited, a:link{
 }
 
 span{
-    color : rgba( 255, 255, 255, 0 )!important
+    color : rgba( 0, 0, 0, 1 )!important;
 }
 span:hover{
     text-decoration: none;
-    color:black;
+    color:rgba( 0, 0, 0, 0.5 );
+}
+.carousel-control-next, .carousel-control-prev{
+    opacity : 1!important;
 }
 

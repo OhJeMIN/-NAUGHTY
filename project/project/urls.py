@@ -22,6 +22,7 @@ urlpatterns = [
     path('item', app.views.item, name = 'item'),
     path('login', app.views.login, name='login'),
     path('detail', app.views.detail, name = 'detail'),
-    path('order', app.views.order, name='order')
+    path('order', app.views.order, name='order'),
+    path('l', app.views.loding, name='loding')
 ]
 

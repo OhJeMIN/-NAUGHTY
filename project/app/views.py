@@ -15,3 +15,5 @@ def detail(request):
 
 def order(request):
     return render(request, 'order.html')
+def loding(request):
+    return render(request, 'loding.html')
