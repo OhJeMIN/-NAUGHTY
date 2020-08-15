@@ -1,0 +1,62 @@
+{% load static %}
+<style>
+    @font-face{
+        font-family:'Bodoni MT'; 
+        src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+        url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+        url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
+    }
+    h1.fi {
+        display: none;
+        
+    }
+    .f{
+        position: absolute;
+        color:black;
+        font-size: 12vw;
+        margin-top:4vh;
+        margin-left: 31vw;
+        font-family:'Bodoni MT';
+        color: transparent;
+        text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .fi{
+        position: absolute;
+        z-index: 1;
+        color:rgb(245,221,195);
+        font-size: 12vw;
+        margin-top:4vh;
+        margin-left: 31vw;
+        font-family:'Bodoni MT';
+    }
+    
+    
+    body {
+
+		background-image : url({% static '로딩.jpg'%});
+
+		background-repeat : no-repeat;
+
+		background-size : cover;
+
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('h1.fi').delay(2000).fadeIn(5000, function(){
+            $(location).attr('href', '/')
+        });
+        $('h1.f').fadeOut(5000);
+    });
+</script>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="fi text-center">NAUGHTY</h1>
+        <h1 class="f">NAUGHTY</h1>
+    </div>
+</div>

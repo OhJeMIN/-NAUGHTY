@@ -1,0 +1,327 @@
+@font-face{
+    font-family:'YDIYGO350'; 
+    src:url("{% static 'fonts/YDIYGO350.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕350.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+
+.detail{
+    font-family:'YDIYGO350';
+    margin-left: 5em;
+}
+
+.inline-block{
+    display: inline-block;
+    
+  
+}
+.scroll-bar{
+    height: 70em;
+    overflow: auto;
+}
+.scroll-bar::-webkit-scrollbar{
+    background-color: white;
+}
+.red{
+    color: red;
+    font-size: larger;
+}
+.vertical-top{
+    vertical-align: top;
+}
+.block{
+    display: block;
+    float:center;
+}
+.subtitle{
+    font-size: larger;
+}
+.num-box{
+    width: 8em;
+    height: 2.3em;
+    border-style: solid;
+    border-width: 0.1px;
+    text-align: center;
+    vertical-align: center;
+    padding-top: 0.33em;
+    
+}
+.select-num{
+    width: 3em;
+    height: 2.3em;
+    margin-left: -0.5em;
+    padding-bottom: 0.1em;
+    border-color: black;
+}
+.select-num:before { /* 화살표 대체 */ 
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    margin-top: -1px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333; 
+}
+.shopping-box{
+    
+    border-style: solid;
+    border-width: 0.1px;
+    margin-top: 0.33em;
+    width: 10em;
+    height: 2.5em;
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    
+}
+.information{
+    margin-top: 2em;
+    width: 24em;
+}
+.hidden-display{
+    display: none;
+    width: 20em;
+    font-weight: 100;
+    color: rgb(82, 81, 81);
+}
+.black{
+    color: black;
+    text-decoration: underline;
+}
+.scroll{
+    height: 10em;
+    width: 22em;
+    overflow: auto;
+}
+.scroll::-webkit-scrollbar{
+    background-color: white;
+}
+
+
+/* 캐러셀 */
+
+a { text-decoration:none;}
+img { border:none; vertical-align:top;}
+
+.carousel{
+    margin:0px;padding:0px;
+    width: 550px; margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.carousel .view{
+    margin:0px;padding:0px;
+    width: 450px; margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.carousel .view .list{
+    margin:0px;padding:0px;
+    width: 1350px; margin-left: -450px;
+}
+.carousel .view .list:after{
+    margin:0px;padding:0px;content: "";display: block;clear: both;}
+
+.carousel .view .list > li{
+    list-style:none;
+    margin:0px;padding:0px;
+    float:left;
+}
+.carousel .view .list > li ul:after{margin:0px;padding:0px;content: "";display: block;clear: both;}
+
+.carousel .view .list > li ul li{
+    list-style:none;
+    margin:0px;padding:0px;
+    float: left;
+    width: 130px; height: 150px;
+    margin-left: 10px; margin-right: 10px;
+}
+.carousel .view .list > li ul li.a1{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a2{margin:0px;padding:0px; background-image: url(https://www.6n7.com/shopimages/junenjuly/151001000056.jpg?1594784020); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a3{margin:0px;padding:0px; background-image: url(https://image.auction.co.kr/itemimage/19/c6/0e/19c60e3056.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a4{margin:0px;padding:0px; background-image: url(https://pbs.twimg.com/media/EEPbMUyVAAA9oOs.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a5{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a6{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/d006f111-ce8e-4537-99dc-155c9eeaf695.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a7{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a8{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a9{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+
+.carousel .prev{
+    margin:0px;padding:0px;
+    position: absolute; width: 25px; height: 50px;  color:rgb(0, 0, 0);
+    left: 0; top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.carousel .next{
+    margin:0px;padding:0px;
+    position: absolute; width: 50px; height: 50px;  color:rgb(0, 0, 0);
+    right: 0; top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+/* 캐러셀 */
+.review{
+    width:80%; float: center; 
+}
+.font{
+    font-family:'YDIYGO350';
+}
+.border{
+    border: solid black;
+    border-radius: 10px;
+}
+/*하트*/
+.fa-heart-o {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .fa-heart {
+    color: red;
+    cursor: pointer;
+  }
+  /*하트*/
+       
+/*popover*/
+
+.item-list:hover{
+	background-color:rgba(93,93,93,0.6);
+  
+}
+.item-list{
+  color : #3d3d3d;
+	position: relative;
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	
+	z-index: 1;
+	transition: .3s ease-out;
+
+}
+
+.modal-window{
+  position: fixed;
+  background-color: rgba(1, 1, 1, 0.15);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #f3f3f3;
+  color: #444;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.btn, .btn-large, .btn-flat {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.btn, .btn-large {
+    text-decoration: none;
+    color: black;
+    background-color: #ffffff;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+.btn, .btn-large, .btn-floating, .btn-large, .btn-flat {
+    font-size: 1rem;
+    outline: 0;
+}
+.comment-submit{
+    background-color:white;
+    width: 3em;
+    border-width: 1px;
+    float: right;
+    margin-top: -3em;
+    margin-left: 5.9em;
+    padding:0.68em 0;
+    text-align: center;
+    z-index: 1;
+}
+.textarea{
+    resize: none;
+    width: 85%;
+    height: 3em;
+    overflow: auto;
+}
+.textarea::-webkit-scrollbar{
+    background-color: white;
+}
+.comment-button{
+    margin-top: -3em;
+    padding-left:0em;
+    color:gray;
+}

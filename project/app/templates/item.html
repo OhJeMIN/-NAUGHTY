@@ -1,6 +1,31 @@
 {%extends 'base.html' %}
 {%block contents%}
 {% load static %}
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+    $(function() {
+        $('body > div.container-fluid.mt-5 > div > div > div > img:nth-child(1)').mouseover(function(){
+            $(this).addClass('show');
+            $(this).next().removeClass('show');
+        })	
+        $('body > div.container-fluid.mt-5 > div > div > div > div').mouseout(function(){
+            $(this).prev().removeClass('show');
+            $(this).addClass('show');
+        })
+        
+    });
+      
+    
+</script>
+<style>
+    .show{
+        display: none;
+    }
+    .hoverCard{
+        background-color: rgb(195,195,195);
+    }
+
+</style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
 <script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
 <div class="container-fluid">
@@ -39,60 +64,231 @@
         <div class="col-2">COUPLE</div>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container-fluid mt-5 bg-light">
     <div class="row row-cols-1 row-cols-md-3">
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
-        <div class="col mb-4">
-            <div class="card">
+        <div class="col p-0">
+            <div class="card border-0 rounded-0">
                 <img src="https://assets.styleship.com/fila/data/productimages/a/3/FI4BAC6641F_CAN.jpg"
                     class="card-img-top" alt="...">
+                <div class="show">
+                    <div class="card rounded-0 hoverCard border-0">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-9 mt-3">
+                                <img src="{% static '착샷.jpg'%}"
+                                class="card-img-top w-100 rounded-0" alt="..." >
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-center">
+                            <p class="mb-0">BLACK_LACE BRA</p>
+                            
+                        </div>
+                        <div class="row p-0 d-flex justify-content-center">
+                            <p>&#8361;12400</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
     </div>

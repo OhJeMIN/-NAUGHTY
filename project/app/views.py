@@ -22,8 +22,14 @@ def info1(request):
 def info2(request):
     return render(request, 'info2.html')
     
-def detail(request):
-    return render(request, 'detail.html')
+def mypage(request):
+    return render(request, 'mypage.html')
 
 def order(request):
     return render(request, 'order.html')
+
+def detail(request):
+    return render(request, 'detail.html')
+    
+def loding(request):
+    return render(request, 'loding.html')
