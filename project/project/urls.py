@@ -28,6 +28,10 @@ urlpatterns = [
     path('join2', app.views.join2, name='join2'),
     path('info1', app.views.info1, name='info1'),
     path('info2', app.views.info2, name='info2'),
+    path('info3', app.views.info3, name='info3'),
+    path('info4', app.views.info4, name='info4'),
+    path('info5', app.views.info5, name='info5'),
+    path('survey', app.views.survey, name='survey'),
     path('l', app.views.loding, name='loding')
 ]
 

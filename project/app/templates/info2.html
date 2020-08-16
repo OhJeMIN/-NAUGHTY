@@ -19,49 +19,23 @@
             <div class="card" style="height: 350px;">
                 <div class="card-body">
                     <div class="card-text">
-                        <form action="" method="GET">
+                        <form action="{% url 'info3' %}" method="GET">
                             <div class="card-text2">
-                                <h4>여기는 아님 사진으로 채워!!</h4>
+                                <h4>당신은 커플입니까?</h4>
                             </div>
                             <div>
-                                <input type="submit" name="sex" id="male"class="btninfo border" style="line-height:0px; color:white" value="남자">
-                                <input type="submit" name="sex" id="female"class="btninfo border" style="line-height:0px; color:white" value="여자">
+                                <input type="submit" name="couple" id="yes"class="btninfo border" style="line-height:0px; color:white" value="YES">
+                                <input type="submit" name="couple" id="no"class="btninfo border" style="line-height:0px; color:white" value="NO">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="card" style="height: 350px;">
-                <div class="card-body">
-                    <div class="card-text pt-0">
-                        <p class="invitation">INVITATION</p>
-                        <div class="card-text2 pt-4">
-                            <h4>매일 함께할 선물을 준비해보세요</h4>
-                        </div>
-                        <div>
-                            <p class="mb-1">간단한 설문지를 작성해주세요</p>
-                        </div>
-                        <div>
-                            <a href="#">
-                            <button class="btninfo2 border" style="line-height:0px; color:white">YES</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="card p-0" style="border-style:none;">
+                <img class="card-img-top" src="{% static 'img/20.jpg'%}" height="350px" alt="Card image cap">    
             </div>
-            <div class="card" style="height: 350px;">
-                <div class="card-body">
-                    <div class="card-text">
-                            <div class="card-text2">
-                                <h4>연인을 초대해보세요</h4>
-                            </div>
-                            <div>
-                                <a href="#">
-                                <button class="btninfo border" style="line-height:0px; color:white">초대하기</button>
-                                </a>
-                            </div>
-                    </div>
-                </div>
+            <div class="card p-0" style="border-style:none;">
+                <img class="card-img-top" src="{% static 'img/18.jpg'%}" height="350px" alt="Card image cap">    
             </div>
         </div>
 
