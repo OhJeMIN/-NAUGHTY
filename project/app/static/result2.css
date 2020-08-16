@@ -31,27 +31,31 @@ body{
     margin-right:0;
 }
 
-/*까만배경*/
-.row1 {
+.row{
     background-color: #000000;
     height: 70%;
     font-family:'YDIYGO340'; 
     color:snow;
 }
 
-/*카드 감싸는 div*/
-.row {
-    justify-content: center;
-}
-
 .card-deck{
     width:100%;
     padding: 3%;
-    padding-bottom: 4%;
+    padding-bottom: 0;
     padding-top:0;
     margin-right: 0;
     margin-left: 0;
     margin:0 auto;
+}
+
+.card-border {
+    width:80%;
+    border-style: solid;
+    border-color: snow;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top:0;
+    padding:40px 10px;
 }
 
 .card {
@@ -59,17 +63,15 @@ body{
     margin: 1%;
     padding: 1%;
     height:200px;
-    width: 200px;
     color: snow;
     background-color: #000000;
     border-color: snow;
     font-family:'YDIYGO310'; 
 }
 
-.card-title{
-    font-family:'YDIYGO340'; 
-    font-size:40px;
-}
+a:link { color: snow; text-decoration: none;}
+a:visited { color: snow; text-decoration: none;}
+a:hover { color: snow; text-decoration: none;}
 
 /*NAUGHTY 로고*/
 .brand-txt{
@@ -78,73 +80,40 @@ body{
     font-size:80px;
 }
 
-/*질문*/
-.question {
-    margin:0 auto;
-    padding: 30px;
+/*연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.*/
+.result-txt {
+    margin:auto;
+    font-size:20px;
+    font-family:'YDIYGO310';
 }
 
-/*show5의 버튼*/
+/*결과 설명 길게*/
+.card-text-body {
+    width: 70%; 
+    margin:auto; 
+    line-height:40px;
+    font-family:'YDIYGO310';
+}
+
+.result-button {
+    margin:auto;
+}
+
+.result-button-txt {
+    display:inline-block;
+    font-size:18px;
+}
+
+/*마음에 들지 않으세요?*/
 .btn{
     border-radius: 10px;
     margin: 5px;
     margin-top: 50px;
-    padding: 10px;
-    width: max-content;
-    height: 50px;
+    padding: 5px;
+    width: 25%;
+    height: 40px;
     background-color: black;
     border-style: solid;
     border-color: snow;
     color:snow;
-    font-family:'YDIYGO310'; 
-}
-
-/*show7의 버튼*/
-.btn7{
-    border-radius: 10px;
-    margin: 90px 10px;
-    padding: 0 20px;
-    width: max-content;
-    height: 50px;
-    background-color: black;
-    border-style: solid;
-    border-color: snow;
-    color:snow;
-    font-family:'YDIYGO310'; 
-}
-
-a:link { color: snow; text-decoration: none;}
-a:visited { color: snow; text-decoration: none;}
-a:hover { color: snow; text-decoration: none;}
-
-.show5-answer{
-    height: 70px;
-}
-
-#show1{
-    display:block;
-}
-
-#show2{
-    display:none;
-}
-
-#show3{
-    display:none;
-}
-
-#show4{
-    display:none;
-}
-
-#show5{
-    display:none;
-}
-
-#show6{
-    display:none;
-}
-
-#show7{
-    display:none;
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result2.css'%}">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a#down").click(function(){
+            switch($(".test").text()){
+                case "1":
+                $("#show2").css("display", "block");
+                $("#show1").css("display", "none");
+                $("a#up").css("visibility", "visible");
+                $(".test").text("2");  
+                break;
+                case "2":
+                $("a#up").css("visibility", "visible"); 
+                $("#show3").css("display", "block");
+                $("#show2").css("display", "none");
+                $(".test").text("3");
+                break;
+                case "3": 
+                $("#show4").css("display", "block");
+                $("#show3").css("display", "none");
+                $("a#down").css("visibility", "hidden");
+                $(".test").text("4");
+                break;
+            }
+            });
+
+            $("a#up").click(function(){
+                switch($(".test").text()){
+                    case "2": 
+                    $("#show1").css("display", "block");
+                    $("#show2").css("display", "none");
+                    $("a#up").css("visibility", "hidden");
+                    $(".test").text("1");
+                    break;
+                    case "3": 
+                    $("#show2").css("display", "block");
+                    $("#show3").css("display", "none");
+                    $(".test").text("2");
+                    break;
+                    case "4": 
+                    $("#show3").css("display", "block");
+                    $("#show4").css("display", "none");
+                    $("a#down").css("visibility", "visible");
+                    $(".test").text("3");
+                    break;
+                }
+                });
+        });
+
+    </script>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
+    <div class="row">
+        <p class="test" style="margin:auto; color:snow; display: none;">1</p>
+        <p class="result-txt mt-4" style="height: fit-content;">연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.</p>
+        <div class="card-border" id="show1" style="display: block;">
+            <h5 class="card-text-title mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <div class="card-deck">
+                <a href="#" class="result-button" id="up" style="visibility: hidden;">
+                    <div><i class="fa fa-angle-up fa-4x"></i></div>
+                </a>                
+                <div class="card p-0" style="border-style:none;">
+                    <a href="{% url 'detail' %}">
+                    <img class="card-img-top" id="img1" src="{% static 'img/1.jpg'%}" height="200px" alt="Card image cap">
+                    </a>    
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'img/2.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'img/3.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <a href="#" class="result-button" id="down">
+                    <div><i class="fa fa-angle-down fa-4x"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="card-border" id="show2" style="display: none;">
+            <h5 class="card-text-title mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <div class="card-deck">
+                <a href="#" class="result-button" id="up">
+                    <div><i class="fa fa-angle-up fa-4x"></i></div>
+                </a>                
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'img/2.jpg'%}" height="200px" alt="Card image cap">
+                    </a>    
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'img/2.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'img/3.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <a href="#" class="result-button" id="down">
+                    <div><i class="fa fa-angle-down fa-4x"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="card-border" id="show3" style="display: none;">
+            <h5 class="card-text-title mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <div class="card-deck">
+                <a href="#" class="result-button" id="up">
+                    <div><i class="fa fa-angle-up fa-4x"></i></div>
+                </a>                
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'img/3.jpg'%}" height="200px" alt="Card image cap">
+                    </a>    
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'img/2.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'img/3.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <div class="card p-0" style="border-style:none;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                </div>
+                <a href="#" class="result-button" id="down">
+                    <div><i class="fa fa-angle-down fa-4x"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="card-border" id="show4" style="display: none;">
+            <h5 class="card-text-title mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <div class="card-deck">
+                <a href="#" class="result-button" id="up">
+                    <div><i class="fa fa-angle-up fa-4x"></i></div>
+                </a>                
+                <div class="card p-0" style="border-style:none;">
+                    <a href="{% url 'index' %}">
+                    <button class="btn">마음에 들지 않으세요?</button>
+                    </a>    
+                </div>               
+                <a href="#" class="result-button" id="down">
+                    <div><i class="fa fa-angle-down fa-4x"></i></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

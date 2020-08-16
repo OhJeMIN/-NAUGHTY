@@ -16,62 +16,34 @@
             $("a").click(function(){
             switch($(".test").text()){
                 case "1": 
-                $("p.question").text("두번째 질문");
-                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
-                $('#txt1').text("민트초코");
-                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
-                $('#txt2').text("ㅋㅋㅋㅋ");
-                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
-                $('#txt3').text("ㅇㅇ");
-                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
-                $('#txt4').text("ㅎㅎ");
-                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
-                $('#txt5').text("ㅅㅅ");
-                $(".test").text("2");
+                $("#show2").css("display", "block");
+                $("#show1").css("display", "none");
+                $(".test").text("2");  
                 break;
                 case "2": 
-                $("p.question").text("세번째 질문");
-                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
-                $('#txt1').text("딸기");
-                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
-                $('#txt2').text("ㅋㅋㅋㅋ");
-                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
-                $('#txt3').text("ㅇㅇ");
-                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
-                $('#txt4').text("ㅎㅎ");
-                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
-                $('#txt5').text("ㅅㅅ");
-                $(".test").text("3");
+                $("#show3").css("display", "block");
+                $("#show2").css("display", "none");
+                $(".test").text("3");  
                 break;
                 case "3": 
-                $("p.question").text("네번째 질문");
-                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
-                $('#txt1').text("졸려");
-                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
-                $('#txt2').text("ㅋㅋㅋㅋ");
-                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
-                $('#txt3').text("ㅇㅇ");
-                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
-                $('#txt4').text("ㅎㅎ");
-                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
-                $('#txt5').text("ㅅㅅ");
-                $(".test").text("4");
+                $("#show4").css("display", "block");
+                $("#show3").css("display", "none");
+                $(".test").text("4");  
                 break;
                 case "4": 
-                $("p.question").text("다섯번째 질문");
-                $('#img1').attr('src', "{% static 'img/5.jpg'%}");
-                $('#txt1').text("자자");
-                $('#img2').attr('src', "{% static 'img/1.jpg'%}");
-                $('#txt2').text("ㅋㅋㅋㅋ");
-                $('#img3').attr('src', "{% static 'img/2.jpg'%}");
-                $('#txt3').text("ㅇㅇ");
-                $('#img4').attr('src', "{% static 'img/4.jpg'%}");
-                $('#txt4').text("ㅎㅎ");
-                $('#img5').attr('src', "{% static 'img/17.jpg'%}");
-                $('#txt5').text("ㅅㅅ");
-                $(".test").text("5");
+                $("#show5").css("display", "block");
+                $("#show4").css("display", "none");
+                $(".test").text("5");  
                 break;
-                case "5": 
+                case "5":
+                $("#show6").css("display", "block");
+                $("#show5").css("display", "none"); 
+                $(".test").text("6");  
+                break;
+                case "6":
+                $("#show7").css("display", "block");
+                $("#show6").css("display", "none");
+                $(".test").text("7");   
                 break;
             }
             });
@@ -82,54 +54,255 @@
     </script>
 </head>
 <body>
+<form action="{% url 'result1' %}" method="GET">
 <div class="container-fluid text-center">
     <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
-        <div class="row">
-            <p class="test" style="margin:auto; color:snow; display:none;">1</p>
-            <p class="question">Q. 더운 여름날 당신의 이상형이 아이스크림을 먹고싶다고 합니다. <br> 당신은 어떤 맛을 고르시겠습니까?</p>
-            <div class="card-deck">
-                <div class="card p-0" style="border-style:none;">
+    <p class="test" style="margin:auto; color:snow; display:none;">1</p>
+        
+        <div class="row1" id="show1">
+            <p class="question">Q. 오늘은 연인과 데이트 하기로 한 날입니다. <br> 당신은 연인과 어디서 추억을 만드시겠습니까?</p>
+            <div class="row">
+                <div class="card p-0" style="border-style:none; width:200px;">
                     <a href="#">
-                    <img class="card-img-top" id="img1" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">
+                    <img class="card-img-top" id="img1" src="{% static 'surveyimg/놀이터.jpg'%}" height="200px" width="200px" alt="Card image cap">
                     </a>  
                     <div class="card-body">
-                        <div class="answer" id="txt1">요거트</div>
+                        <div class="answer" id="txt1">집 앞 놀이터</div>
                     </div>  
                 </div>
-                <div class="card p-0" style="border-style:none;">
+                <div class="card p-0" style="border-style:none; width:200px;">
                     <a href="#">
-                    <img class="card-img-top" id="img2" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    <img class="card-img-top" id="img2" src="{% static 'surveyimg/미술관.jpg'%}" height="200px" alt="Card image cap">    
                     </a>
                     <div class="card-body">
-                        <div class="answer" id="txt2">요거트</div>
+                        <div class="answer" id="txt2">미술관</div>
                     </div>  
                 </div>
-                <div class="card p-0" style="border-style:none;">
+                <div class="card p-0" style="border-style:none; width:200px;">
                     <a href="#">
-                    <img class="card-img-top" id="img3" src="{% static 'img/4.jpg'%}" height="200px" alt="Card image cap">    
+                    <img class="card-img-top" id="img3" src="{% static 'surveyimg/바.png'%}" height="200px" alt="Card image cap">    
                     </a>
                     <div class="card-body">
-                        <div class="answer" id="txt3">요거트</div>
+                        <div class="answer" id="txt3">바</div>
                     </div>  
                 </div>
-                <div class="card p-0" style="border-style:none;">
+                <div class="card p-0" style="border-style:none; width:200px;">
                     <a href="#">
-                    <img class="card-img-top" id="img4" src="{% static 'img/5.jpg'%}" height="200px" alt="Card image cap">    
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/꽃놀이.jpg'%}" height="200px" alt="Card image cap">    
                     </a>
                     <div class="card-body">
-                        <div class="answer" id="txt4">요거트</div>
-                    </div>  
-                </div>
-                <div class="card p-0" style="border-style:none;">
-                    <a href="#">
-                    <img class="card-img-top" id="img5" src="{% static 'img/5.jpg'%}" height="200px" alt="Card image cap">    
-                    </a>
-                    <div class="card-body">
-                        <div class="answer" id="txt5">요거트</div>
+                        <div class="answer" id="txt4">꽃놀이</div>
                     </div>  
                 </div>
             </div>
         </div>
+        <div class="row1" id="show2">
+            <p class="question">Q. 당신은 한번쯤 영화나 드라마 주인공과 데이트를 꿈꾼 적이 있을것입니다. <br>오늘은 주인공과 사랑에 빠지는 날이죠.<br>어떤 주인공과 데이트 하시겠습니까?</p>
+            <div class="row">
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'surveyimg/로미오.jpg'%}" height="200px" width="200px" alt="Card image cap">
+                    </a>  
+                    <div class="card-body">
+                        <div class="answer" id="txt1">로미오</div>
+                        <div><small>(로미오와 줄리엣 1996)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'surveyimg/김신.png'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt2">김신</div>
+                        <div><small>(도깨비 2016)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'surveyimg/피터파커.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt3">피터 파커</div>
+                        <div><small>(스파이더맨:홈커밍 2017)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/제임스본드.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">제임스 본드</div>
+                        <div><small>(007:카지노 로얄 2006)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/모태구.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">모태구</div>
+                        <div><small>(보이스 시즌1 2017)</small></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="row1" id="show3">
+            <p class="question">Q. 당신의 연인은 어떤 계절과 잘 어울리나요?</p>
+            <div class="row">
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'surveyimg/봄.jpg'%}" height="200px" width="200px" alt="Card image cap">
+                    </a>  
+                    <div class="card-body">
+                        <div class="answer" id="txt1">봄</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'surveyimg/여름.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt2">여름</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'surveyimg/가을.png'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt3">가을</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/겨울.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">겨울</div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="row1" id="show4">
+            <p class="question">Q. 미지의 세계로 떨어진 당신,<br>당신의 눈 앞에는 어떤 동물이 앉아있고 그 동물과 여행을 해야합니다.<br>어떤 동물을 선택하시겠습니까?</p>
+            <div class="row">
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'surveyimg/공작.jpg'%}" height="200px" width="200px" alt="Card image cap">
+                    </a>  
+                    <div class="card-body">
+                        <div class="answer" id="txt1">공작</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'surveyimg/지렁이.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt2">지렁이</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'surveyimg/치타.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt3">치타</div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/얼룩말.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">얼룩말</div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="row1" id="show5">
+            <p class="question">Q. 이상형을 만난 당신,<br>당신은 어떻게 행동하시나요?</p>
+            <div class="row2">
+                <div class="show5-answer">
+                    <a href="#">
+                        <button class="btn" type="button" style="color:snow;">A. 직접 가서 번호를 물어본다.</button>
+                    </a>
+                </div>
+                <div class="show5-answer">
+                    <a href="#">
+                        <button class="btn" type="button" style="color:snow;">B. 그냥 지켜보다가 포기한다.</button>
+                    </a>
+                </div>
+                <div class="show5-answer">
+                    <a href="#">
+                        <button class="btn" type="button" style="color:snow;">C. 계속 시선을 보내서 자신을 쳐다보게 유도한다.</button>
+                    </a>
+                </div>    
+            </div>
+        </div>
+        <div class="row1" id="show6">
+            <p class="question">Q. 당신은 한번쯤 영화나 드라마 주인공과 데이트를 꿈꾼 적이 있을것입니다. <br>오늘은 주인공과 사랑에 빠지는 날이죠.<br>어떤 주인공과 데이트 하시겠습니까?</p>
+            <div class="row">
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img1" src="{% static 'surveyimg/메리.jpg'%}" height="200px" width="200px" alt="Card image cap">
+                    </a>  
+                    <div class="card-body">
+                        <div class="answer" id="txt1">메리</div>
+                        <div><small>(어바웃 타임 2013)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img2" src="{% static 'surveyimg/할리퀸.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt2">할리퀸</div>
+                        <div><small>(수어사이드 스쿼드 2016)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img3" src="{% static 'surveyimg/서연.jpg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt3">서연</div>
+                        <div><small>(건축학개론 2012)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/블랙위도우.png'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">블랙 위도우</div>
+                        <div><small>(어벤져스:엔드게임 2019)</small></div>
+                    </div>  
+                </div>
+                <div class="card p-0" style="border-style:none; width:200px;">
+                    <a href="#">
+                    <img class="card-img-top" id="img4" src="{% static 'surveyimg/캐서린트라멜.jpeg'%}" height="200px" alt="Card image cap">    
+                    </a>
+                    <div class="card-body">
+                        <div class="answer" id="txt4">캐서린 트라멜</div>
+                        <div><small>(원초적본능 1992)</small></div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="row1" id="show7">
+            <p class="question">Q. 당신은 데이트할때 어떤 스타일입니까?</p>
+            <div class="row2">
+                <a href="#">
+                    <button class="btn7" type="submit" style="color:snow;">A. 먼저 제안하고 리드하는 편입니다.</button>
+                </a>
+                <a href="#">
+                    <button class="btn7" type="submit" style="color:snow;">B. 상대방이 원하는 걸 맞춰주는 편입니다.</button>
+                </a>
+            </div>
+        </div>
+    
 </div>
+</form>
 </body>
 </html>

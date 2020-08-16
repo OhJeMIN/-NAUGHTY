@@ -32,6 +32,8 @@ urlpatterns = [
     path('info4', app.views.info4, name='info4'),
     path('info5', app.views.info5, name='info5'),
     path('survey', app.views.survey, name='survey'),
+    path('result1', app.views.result1, name='result1'),
+    path('result2', app.views.result2, name='result2'),
     path('l', app.views.loding, name='loding')
 ]
 

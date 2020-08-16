@@ -31,6 +31,12 @@ def info4(request):
 def info5(request):
     return render(request, 'info5.html')
 
+def result1(request):
+    return render(request, 'result1.html')
+
+def result2(request):
+    return render(request, 'result2.html')
+
 def survey(request):
     return render(request, 'survey.html')
     
