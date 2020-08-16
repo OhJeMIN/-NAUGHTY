@@ -9,6 +9,18 @@ def item(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def join1(request):
+    return render(request, 'join1.html')
+
+def join2(request):
+    return render(request, 'join2.html')
+
+def info1(request):
+    return render(request, 'info1.html')
+
+def info2(request):
+    return render(request, 'info2.html')
     
 def mypage(request):
     return render(request, 'mypage.html')
