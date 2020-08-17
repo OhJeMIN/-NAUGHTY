@@ -20,6 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', app.views.index, name = 'index'),
     path('item', app.views.item, name = 'item'),
+    path('item1', app.views.item1, name = 'item1'),
+    path('item2', app.views.item2, name = 'item2'),
     path('login', app.views.login, name='login'),
     path('mypage', app.views.mypage, name = 'mypage'),
     path('order', app.views.order, name='order'),
@@ -34,6 +36,6 @@ urlpatterns = [
     path('survey', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
-    path('l', app.views.loding, name='loding')
+    path('loading', app.views.loding, name='loading')
 ]
 

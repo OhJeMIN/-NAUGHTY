@@ -7,6 +7,12 @@ def index(request):
 def item(request):
     return render(request, 'item.html')
 
+def item1(request):
+    return render(request, 'item1.html')
+
+def item2(request):
+    return render(request, 'item2.html')
+
 def login(request):
     return render(request, 'login.html')
 
