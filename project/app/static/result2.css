@@ -89,7 +89,8 @@ a:hover { color: snow; text-decoration: none;}
 /*연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.*/
 .result-txt {
     margin:0 auto;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
     font-size:20px;
     font-family:'YDIYGO310';
 }
