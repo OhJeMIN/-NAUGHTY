@@ -1,0 +1,111 @@
+@font-face{
+    font-family:'Bodoni MT'; 
+    src:url("{% static 'fonts/BodoniMTCondensed-Bold.ttf' %}") format('truetype'),
+    url("{% static 'fonts/BOD_CB.TTF.eot' %}") format('embedded-opentype'),
+    url("{% static 'fonts/BodoniMTCondensed-Bold.woff' %}") format('woff');
+}
+
+@font-face{
+    font-family:'YDIYGO310'; 
+    src:url("{% static 'fonts/YDIYGO310.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕310.eot' %}") format('embedded-opentype');
+}
+
+@font-face{
+    font-family:'YDIYGO340'; 
+    src:url("{% static 'fonts/YDIYGO340.woff' %}") format('woff'),
+    url("{% static 'fonts/윤고딕340.eot' %}") format('embedded-opentype');
+}
+
+body{
+    margin: 0;
+    background-color:#353535;
+}
+
+.container-fluid{
+    width:100vw;
+    height:100vh;
+    padding-left:0;
+    padding-right:0;
+    margin-right:0;
+}
+
+.row1{
+    background-color: #000000;
+    height: 70%;
+    font-family:'YDIYGO340'; 
+    color:snow;
+}
+
+.card-deck{
+    width:100%;
+    padding: 3%;
+    padding-bottom: 0;
+    padding-top:0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.card-border {
+    width:60%;
+    border-style: solid;
+    border-color: snow;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top:0;
+    padding:20px 10px;
+}
+
+.card {
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+    height:220px;
+    color: snow;
+    background-color: #000000;
+    font-family:'YDIYGO310'; 
+}
+
+a:link { color: snow; text-decoration: none;}
+a:visited { color: snow; text-decoration: none;}
+a:hover { color: snow; text-decoration: none;}
+
+/*NAUGHTY 로고*/
+.brand-txt{
+    color:#f4ddc2;
+    font-family:'Bodoni MT';
+    font-size:80px;
+}
+
+/*연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.*/
+.result-txt {
+    margin:0 auto;
+    padding: 30px;
+    font-size:20px;
+    font-family:'YDIYGO310';
+}
+
+.card-text-title {
+    margin:0 5px; 
+    font-family:'YDIYGO340';
+}
+
+/*결과 설명 길게*/
+.card-text-body {
+    width: 100%; 
+    margin:0 auto; 
+    line-height:30px;
+    font-family:'YDIYGO310';
+}
+
+.result-button {
+    margin:auto;
+}
+
+.result-button-txt {
+    display:inline-block;
+    font-size:18px;
+    line-height: 70px;
+    vertical-align: middle;
+    padding-left: 5px;
+}

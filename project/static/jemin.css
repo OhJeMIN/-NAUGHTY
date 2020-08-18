@@ -69,3 +69,13 @@ span:hover{
     opacity : 1!important;
 }
 
+.image{
+    position: relative;
+}.image .text{
+    text-align: center;
+    position: absolute;
+    color:black;
+    top: 27vw;
+    left: 13vh
+    
+}
