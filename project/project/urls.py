@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,5 +39,5 @@ urlpatterns = [
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
     path('loading', app.views.loding, name='loading')
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
