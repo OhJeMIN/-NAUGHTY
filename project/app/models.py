@@ -1,9 +1,8 @@
 from django.db import models
 
-from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
-class User_info(models.Model):
+class UserInfo(models.Model):
     user_id = models.IntegerField()
     gender = models.BooleanField()
     couple = models.IntegerField()
@@ -27,6 +26,6 @@ class Item(models.Model):
     detail_img2 = models.ImageField(upload_to='images/')
     detail_img3 = models.ImageField(upload_to='images/')
     gender = models.IntegerField()
-    type = models.CharField(max_length=100)
-    color = ArrayField(models.CharField(max_length=100, blank=True),size=5)
+    types = models.CharField(max_length=100)
+    color = models.CharField(max_length=500)
     remark = models.CharField(max_length=100)
