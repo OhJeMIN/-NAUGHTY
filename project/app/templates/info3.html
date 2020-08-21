@@ -10,6 +10,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
     {% load static %}
     <link rel="stylesheet" href="{% static 'login.css'%}">
+    <style>
+        label {
+            border:solid 1px;
+            border-radius: 10px;
+            margin: 4px;
+            padding: 5px;
+            width: 30%;
+            height: 30px;
+            background-color: black;
+            line-height:20px;
+            color:snow;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid text-center">
@@ -22,14 +36,14 @@
             <div class="card" style="height: 350px;">
                 <div class="card-body">
                     <div class="card-text">
-                        <form action="{% url 'info4' %}" method="GET">
+                        <form action="/infotypeud/{{userinfo.id}}" method="GET">
                             <div class="card-text2">
                                 <h4>어떤 커플입니까?</h4>
                             </div>
                             <div>
-                                <input type="submit" name="coupletype" id="mm"class="btninfo2 border" style="line-height:0px; color:white" value="남:남">
-                                <input type="submit" name="coupletype" id="mw"class="btninfo2 border" style="line-height:0px; color:white" value="남:여">
-                                <input type="submit" name="coupletype" id="ww"class="btninfo2 border" style="line-height:0px; color:white" value="여:여">
+                                <input type="submit" name="couple" id="mm"class="btninfo2 border" style="line-height:0px; color:white; display: none;" value="2"><label for="mm">남:남</label>
+                                <input type="submit" name="couple" id="mw"class="btninfo2 border" style="line-height:0px; color:white; display: none;" value="3"><label for="mw">남:여</label>
+                                <input type="submit" name="couple" id="ww"class="btninfo2 border" style="line-height:0px; color:white; display: none;" value="4"><label for="ww">여:여</label>
                             </div>
                         </form>
                     </div>

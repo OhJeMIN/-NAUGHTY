@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="{% static 'login.css'%}">
 </head>
 <body>
+<script type="text/javascript">
+function writeCheck() {
+  var form = document.writeform;
+  if (!form.user_name.value)
+  {
+      alert("아이디를 입력해주세요");
+      form.user_name.focus();
+      return false;
+  }
+  if (!form.password.value) {
+      alert("비밀번호를 입력해주세요");
+      form.password.focus();
+      return false;
+  }
+  form.submit();
+}
+</script>
+
+{% if error %}<!--
+<script type="text/javascript">
+  alert("올바른 계정이 아닙니다");
+</script>-->
+{% endif %}
 <div class="container-fluid text-center">
     <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
 
@@ -22,18 +45,19 @@
             <div class="card" style="height: 350px;">
               <div class="card-body">
                 <h3 class="card-title mt-4">Login</h3>
-                <form action="{% url 'info1' %}" method="GET">
+                <form action="{% url 'login' %}" method="POST" name="writeform">
+                  {% csrf_token %}
                     <div>
-                        <input class="input border" type="text" name="id" placeholder="  ID">
+                        <input class="input border" type="text" name="user_name" placeholder="  ID">
                     </div>
                     <div>
-                        <input class="input border" type="password" name="pw" placeholder="  PW">
+                        <input class="input border" type="password" name="password" placeholder="  PW">
                     </div>
                     <div>
                         <a href="{% url 'join1' %}">
                         <input type="button" class="btn border" style="line-height:0px; color:white" value="Join">
                         </a>
-                        <input type="submit" class="btn border" style="line-height:0px; color:white" value="Enter">
+                        <input type="submit" class="btn border" style="line-height:0px; color:white" value="Enter" OnClick="javascript:writeCheck();">
                     </div>
                 </form>
               </div>
