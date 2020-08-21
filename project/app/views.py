@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Item, Review, UserInfo
-=======
-<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import UserInfo,Review,Comment,Item
-=======
->>>>>>> 81bfffaa13189a2785ce60ac342517cf31054645
-from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
 
->>>>>>> 2589996db1a0f4544b563d21458adde57a308a53
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -110,10 +101,10 @@ def detail(request, id):
     userinfo = UserInfo.objects
     return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
 
-<<<<<<< HEAD
+
 def loading(request):
     return render(request, 'loading.html')
-=======
+
 def loding(request):
     return render(request, 'loding.html')
 
@@ -161,7 +152,4 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
-<<<<<<< HEAD
-=======
->>>>>>> 2589996db1a0f4544b563d21458adde57a308a53
->>>>>>> 81bfffaa13189a2785ce60ac342517cf31054645
+

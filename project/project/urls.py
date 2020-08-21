@@ -44,13 +44,10 @@ urlpatterns = [
     path('survey', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
-<<<<<<< HEAD
     path('loading', app.views.loding, name='loading'),
     path('change_order', app.views.chanege_order, name='change_order'),
     path('review_create', app.views.review_create, name='review_create'),
     
-=======
     path('loading', app.views.loading, name='loading')
->>>>>>> 81bfffaa13189a2785ce60ac342517cf31054645
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
