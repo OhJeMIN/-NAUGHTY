@@ -21,7 +21,7 @@ import app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', app.views.index, name = 'index'),
-    path('item', app.views.item, name = 'item'),
+    path('item/<int:id>', app.views.item, name = 'item'),
     path('item1', app.views.item1, name = 'item1'),
     path('item2', app.views.item2, name = 'item2'),
     path('login', app.views.login, name='login'),
@@ -44,9 +44,13 @@ urlpatterns = [
     path('survey', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
+<<<<<<< HEAD
     path('loading', app.views.loding, name='loading'),
     path('change_order', app.views.chanege_order, name='change_order'),
     path('review_create', app.views.review_create, name='review_create'),
     
+=======
+    path('loading', app.views.loading, name='loading')
+>>>>>>> 81bfffaa13189a2785ce60ac342517cf31054645
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

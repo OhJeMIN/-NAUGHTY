@@ -19,7 +19,7 @@
 
 body{
     margin: 0;
-    background-color:#424242;
+    background-color:#353535;
 }
 
 .container-fluid{
@@ -30,7 +30,7 @@ body{
 }
 
 .card-deck{
-    height: 50%;
+    height: 70%;
     width:100%;
     padding: 3%;
     padding-bottom: 4%;
@@ -43,6 +43,7 @@ body{
     text-align: center;
     margin: 1%;
     padding: 1%;
+    height:350px;
     color: snow;
     background-color: #000000;
     border-color: snow;
@@ -62,6 +63,7 @@ body{
     margin:0 auto;
 }
 
+/*login~join까지 input*/
 .input{
     border-radius: 10px;
     margin: 5px;
@@ -75,7 +77,11 @@ body{
     color:snow;
 }
 
-.btn{
+/*join2에서 체크박스*/
+.checks {position: relative; padding-top:10px; padding-bottom:5px;} .checks input[type="checkbox"] { /* 실제 체크박스는 화면에서 숨김 */ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0 } .checks input[type="checkbox"] + label { display: inline-block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } .checks input[type="checkbox"] + label:before { /* 가짜 체크박스 */ content: ' '; display: inline-block; width: 21px; /* 체크박스의 너비를 지정 */ height: 21px; /* 체크박스의 높이를 지정 */ line-height: 21px; /* 세로정렬을 위해 높이값과 일치 */ margin: -2px 8px 0 0; text-align: center; vertical-align: middle; background: black; border: 1px solid #cacece; border-radius : 3px; box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05); } .checks input[type="checkbox"] + label:active:before, .checks input[type="checkbox"]:checked + label:active:before { box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); } .checks input[type="checkbox"]:checked + label:before { /* 체크박스를 체크했을때 */ content: '\2714'; /* 체크표시 유니코드 사용 */ color: snow; background: black; border-color: snow; box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); }
+
+/*login~join까지 쓰이는 버튼들*/
+.btn{ 
     border-radius: 10px;
     margin: 5px;
     padding: 5px;
@@ -84,13 +90,55 @@ body{
     color:snow;
 }
 
+/*info.html들에서 쓰이는 버튼들*/
+.btninfo{
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    height: 30px;
+    background-color: black;
+    color:snow;
+}
+
+/*어떤 커플입니까? info3.html 버튼 한 줄에 3개 나오게*/
+.btninfo2{
+    border-radius: 10px;
+    margin: 2px;
+    padding: 2px;
+    width: 30%;
+    height: 30px;
+    background-color: black;
+    color:snow;
+}
+
 a:link { color: black; text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
 a:hover { color: black; text-decoration: none;}
 
-
+/*NAUGHTY 로고*/
 .brand-txt{
     color:#f4ddc2;
     font-family:'Bodoni MT';
     font-size:80px;
+}
+
+/*카드 안에서의 TXT 패딩값*/
+.card-text{
+    padding:60px 0;
+}
+
+/*카드 안에서의 TXT 안에서의 패딩값*/
+.card-text2{
+    padding-bottom:20px;
+}
+
+/*invitaion 글자*/
+.invitation{
+    font-family:'Bodoni MT';
+    font-size:36px;
+    background-color: snow;
+    color:black;
+    width: 70%;
+    margin:auto;
 }

@@ -7,6 +7,7 @@
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
+        <!--
         <div class="row card-img-overlay justify-content-center">
             <div class="down col-md-auto">
                 <div class="row mt-5 text-white">
@@ -16,12 +17,13 @@
                     That things are getting better
                 </div>
                 <div class="row text-dark">
-                    <!--div.col 엔터 누르면 div class="col 나옴 점이 class이다 #은 아이디"-->
+                    div.col 엔터 누르면 div class="col 나옴 점이 class이다 #은 아이디"
                     <div class="col-5"><a href="/" class="button1 m-0 btn-block btn text-white">view</a>
                     </div>
                 </div>
             </div>
         </div>
+        -->
     </div>
 </div>
 <div class="container mt-5" style="text-align: center;">
@@ -34,50 +36,35 @@
 </div>
 <div class="container mt-5" style="text-align: center;">
     <div class="row justify-content-center m-0 text-center">
-        <div class="col-2">ALL</div>
-        <div class="col-2">WOMAN</div>
-        <div class="col-2">MAN</div>
-        <div class="col-2">COUPLE</div>
+        <div class="col-2"><a href="/item1">ALL</a></div>
+        <div class="col-2"><a href="/item/2">WOMAN</a></div>
+        <div class="col-2"><a href="/item/1">MAN</a></div>
+        <div class="col-2"><a href="/item2">COUPLE</a></div>
     </div>
 </div>
 <div class="container-fluid mt-5 bg-light">
     <div class="row row-cols-1 row-cols-md-2">
+        {%for i in arr%}
         <div class="col p-1">
-            <div class="card border-0 rounded-0">
-                <img src="{% static '커플1.jpg'%}" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <p>COUPLE-SET</p>
-                    <p>&#8361;30000</p>
+            <a href="/detail/3">
+                <div class="card border-0 rounded-0">
+                    <img src="{{i.main_img.url}}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <p>{{i.name}}</p>
+                        <p>&#8361;{{i.price}}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col p-1">
-            <div class="card border-0 rounded-0">
-                <img src="{% static '커플1.jpg'%}" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <p>COUPLE-SET</p>
-                    <p>&#8361;30000</p>
-                </div>
-            </div>
-        </div>
-        <div class="col p-1">
-            <div class="card border-0 rounded-0">
-                <img src="{% static '커플1.jpg'%}" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <p>COUPLE-SET</p>
-                    <p>&#8361;30000</p>
-                </div>
-            </div>
-        </div>
-        <div class="col p-1">
-            <div class="card border-0 rounded-0">
-                <img src="{% static '커플1.jpg'%}" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <p>COUPLE-SET</p>
-                    <p>&#8361;30000</p>
-                </div>
-            </div>
-        </div>
+        {%endfor%}
+    </div>
+</div>
+<div class="container-fluid mt-3" style="text-align: center;">
+    <div class="row justify-content-center m-0 text-center">
+        <div class="col-2">도움말</div>
+        <div class="col-2">FOLLOW하기</div>
+        <div class="col-2">정책</div>
+        <div class="col-2">회사</div>
     </div>
 </div>
 {%endblock%}
