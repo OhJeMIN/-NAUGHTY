@@ -27,7 +27,7 @@ urlpatterns = [
     path('login', app.views.login, name='login'),
     path('mypage', app.views.mypage, name = 'mypage'),
     path('order', app.views.order, name='order'),
-    path('detail', app.views.detail, name='detail'),
+    path('detail/<int:id>', app.views.detail, name='detail'),
     path('join1', app.views.join1, name='join1'),
     path('join2', app.views.join2, name='join2'),
     path('info1', app.views.info1, name='info1'),
@@ -38,6 +38,9 @@ urlpatterns = [
     path('survey', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
-    path('loading', app.views.loding, name='loading')
+    path('loading', app.views.loding, name='loading'),
+    path('change_order', app.views.chanege_order, name='change_order'),
+    path('review_create', app.views.review_create, name='review_create'),
+    
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

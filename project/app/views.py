@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Item, Review, UserInfo
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -52,8 +52,25 @@ def mypage(request):
 def order(request):
     return render(request, 'order.html')
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request, id):
+    detail = get_object_or_404(Item, pk=id)
+    review = Review.objects
+    userinfo = UserInfo.objects
+    return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
 
 def loding(request):
     return render(request, 'loding.html')
+
+def chanege_order(request):
+    return redirect('/order')
+
+def review_create(request):
+    cr = Review()
+    cr.user_id = request.GET['user_id']
+    cr.contents = request.GET['contents']
+    cr.item_id = request.GET['item_id']
+    cr.save()
+    return redirect('/')
+
+
+

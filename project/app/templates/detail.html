@@ -18,50 +18,7 @@
 
     /*인풋 텍스트 엔터막기*/
     /*하트 클릭*/
-    $(document).ready(function () {
-      $("#heart").click(function () {
-        if ($("#heart").hasClass("liked")) {
-          $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-          $("#heart").removeClass("liked");
-        } else {
-          $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-          $("#heart").addClass("liked");
-        }
-      });
-    });
-    $(document).ready(function () {
-      $("#heart2").click(function () {
-        if ($("#heart2").hasClass("liked")) {
-          $("#heart2").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-          $("#heart2").removeClass("liked");
-        } else {
-          $("#heart2").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-          $("#heart2").addClass("liked");
-        }
-      });
-    });
-    $(document).ready(function () {
-      $("#heart3").click(function () {
-        if ($("#heart3").hasClass("liked")) {
-          $("#heart3").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-          $("#heart3").removeClass("liked");
-        } else {
-          $("#heart3").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-          $("#heart3").addClass("liked");
-        }
-      });
-    });
-    $(document).ready(function () {
-      $("#heart4").click(function () {
-        if ($("#heart4").hasClass("liked")) {
-          $("#heart4").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-          $("#heart4").removeClass("liked");
-        } else {
-          $("#heart4").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-          $("#heart4").addClass("liked");
-        }
-      });
-    });
+    
     /*하트 클릭*/
     /*팬티사진 넘어가는거*/
     $(document).ready(function () {
@@ -131,41 +88,24 @@
     <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scroll-bar">
       <h4 id="fat"></h4>
       <p>
-        <img
-          src="https://sits-pod35.demandware.net/dw/image/v2/ABAD_PRD/on/demandware.static/-/Sites-calvinklein-hk-master/default/dw67040d26/images/hi-res/QF6039-001/QF6039-001-ITEM-1.jpg?sw=522"
-          width="500em" height="600em">
+        <img src="{{detail.detail_img1.url}}" width="500em" height="600em">
       </p>
       <h4 id="mdo"></h4>
       <p>
-        <img
-          src="https://sits-pod35.demandware.net/dw/image/v2/ABAD_PRD/on/demandware.static/-/Sites-calvinklein-hk-master/default/dwfb69ca37/images/hi-res/QF6039-001/QF6039-001-ITEM-2.jpg?sw=522"
-          width="500em" height="600em">
+        <img src="{{detail.detail_img2.url}}" width="500em" height="600em">
       </p>
       <h4 id="one"></h4>
       <p>
-        <img
-          src="https://sits-pod35.demandware.net/dw/image/v2/ABAD_PRD/on/demandware.static/-/Sites-calvinklein-hk-master/default/dweccf8d77/images/hi-res/QF6039-001/QF6039-001-ITEM-3.jpg?sw=522"
-          width="500em" height="600em">
+        <img src="{{detail.detail_img3.url}}" width="500em" height="600em">
       </p>
-      <h4 id="two"></h4>
-      <p>
-        <img
-          src="https://sits-pod35.demandware.net/dw/image/v2/ABAD_PRD/on/demandware.static/-/Sites-calvinklein-hk-master/default/dwdfcd1c43/images/hi-res/QF6039-001/QF6039-001-ITEM-4.jpg?sw=522"
-          width="500em" height="600em">
-      </p>
-      <h4 id="three"></h4>
-      <p>
-        <img
-          src="https://sits-pod35.demandware.net/dw/image/v2/ABAD_PRD/on/demandware.static/-/Sites-calvinklein-hk-master/default/dweccf8d77/images/hi-res/QF6039-001/QF6039-001-ITEM-5.jpg?sw=522"
-          width="500em" height="600em">
-      </p>
+
     </div>
   </div>
   <div class="detail inline-block vertical-top" style="background-color: white; width:35em;">
-    <h3>Blabla_SET</h3>
-    <span class="subtitle">KRW 30,000</span><span class="red" style="margin-left: 1em;">KRW 24,000</span><br>
-    <p class="red" style="margin-left: 6.5em;">YOU SAVE 20%</p>
-    <p class="subtitle">Color</p>
+    <h3 class="mt-3">{{detail.name}}</h3>
+    <span class="subtitle mt-3 mb-2">KRW {{detail.price}}</span>
+
+    <p class="subtitle mt-3">Color</p>
 
 
     <div class="block mb-4">
@@ -177,7 +117,7 @@
       border: white 5px solid;
       box-shadow: 0 0 2px rgb(0, 0, 0);
       "></div>
-      <div class="rounded-circle inline-block" style="background-color: red;
+      <div class="rounded-circle inline-block" style="background-color: {{detail.color}};
       width: 50px;
       height: 50px;
       border-radius: 50px;
@@ -218,7 +158,9 @@
           <option>4</option>
           <option>5</option>
         </select>
-        <input type="submit" class="inline-block shopping-box ml-3" value="장바구니">
+        <a href="{% url 'order'%}">
+          <input type="button" class="inline-block shopping-box ml-3" value="장바구니">
+        </a>
       </div>
     </form>
 
@@ -377,14 +319,15 @@
     <div class="block mx-auto" style="width: 100%;float:left;">
       <hr>
       <!--리뷰 창-->
+
       <center>
         <div class="block mx-auto" style="width:100%; float:left;">
 
-          <!--왼쪽-->
+          <!--왼쪽
           <div class="col-3 inline-block mx-auto border" style="text-align: left;">
 
             <div class="block mx-auto mt-2" style=" text-align:center;">
-              <img src="https://m.zzixx.com/mobile/images/main/t_p01-1_v2.jpg" width="250px" height="250px">
+              <img src="{{detail.main_img}}" width="250px" height="250px">
             </div>
             <div class="block mt-2">
               <span id=heart><i class="fa fa-heart-o" aria-hidden="true"></i> </span>
@@ -392,22 +335,26 @@
                 src="https://imageog.flaticon.com/icons/png/512/99/99671.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"
                 width="20em" height="18em" class="mt-1">
             </div>
-            <div class="block mt-2 font" style="font:small">
-              <span>RIFD님</span>
-              <div style="width: 15em;" class="block scroll">
-                <p>속옷이 너무 편하고 좋아 대박 이렇게 좋은 속옥은 처음입니다
-                  박학격거세 알에서 나왔다 버거킹은 통새우
-                </p>
+            {{review.id}}
+              {% if review.item_id == detail.id %}
+              <div class="block mt-2 font" style="font:small">
+                <span>리뷰{{review.user_id}}님</span>
+                <div style="width: 15em;" class="block scroll">
+                  <p>{{review.contents}}
+                  </p>
+                </div>
+                <a class="item-list btn font comment-button" href="#open-moda">댓글 12개 더보기</a>
               </div>
-              <a class="item-list btn font comment-button" href="#open-moda">댓글 12개 더보기</a>
-            </div>
+              {%endif%}
+            
           </div>
-          <!--왼쪽-->
-          <!--가운데-->
+          -->
+
+          <!--가운데
           <div class="col-3 inline-block center border" style="text-align: left;">
 
             <div class="block mx-auto mt-2" style=" text-align:center;">
-              <img src="https://m.zzixx.com/mobile/images/main/t_p01-1_v2.jpg" width="250px" height="250px"
+              <img src="{{detail.main_img}}" width="250px" height="250px"
                 class="mx-auto">
             </div>
             <div class="block mt-2">
@@ -427,12 +374,14 @@
                 더보기</a>
             </div>
           </div>
+          -->
           <!--가운데-->
 
-          <div class="col-4 inline-block center" style="vertical-align:top; text-align:left;">
+          <div class="col-10 block center" style="vertical-align:top; text-align:left;">
             <!--이미지x 1-->
-            <div class="row-3 block border pl-3">
-
+            {% for i in review.all %}
+            {% if i.item_id == detail.id%}
+            <div class="col-10 block border pl-3 mb-3">
               <div class="block mt-2">
                 <span id=heart3><i class="fa fa-heart-o" aria-hidden="true"></i> </span>
                 <img
@@ -440,69 +389,71 @@
                   width="20em" height="18em" class="mt-1">
               </div>
               <div class="block mt-2 font" style="font:small">
-                <span>RIFD님</span>
-                <div style="width: 18em;" class="block scroll">
-                  <p>속옷이 너무 편하고 좋아 대박 이렇게 좋은 속옥은 처음입니다
-                    박학격거세 알에서 나왔다 버거킹은 통새우1
+                <span>{{i.user_id}}님</span>
+                <div style="width: 45em; height: 6em;" class="block scroll-review">
+                  <p>
+                    {{i.contents}}
                   </p>
                 </div>
                 <a class="item-list btn font comment-button" href="#open-moda" style="margin-top: -3em; color:gray">댓글
-                  12개 더보기</a>
+                  더보기</a>
               </div>
-
             </div>
-            <!--이미지x 1-->
-
-            <!--이미지x 2-->
-            <div class="row-3 block border pl-3" style="margin-top: 2em;">
+            {%endif%}
+            {% endfor %}
+            <!--리뷰작성-->
+            <div class="col-10 block border pl-3 mb-3" style="height: 17em;">
               <div class="block mt-2">
-                <span id=heart4><i class="fa fa-heart-o" aria-hidden="true"></i> </span>
+                <span id=heart3><i class="fa fa-heart-o" aria-hidden="true"></i> </span>
                 <img
                   src="https://imageog.flaticon.com/icons/png/512/99/99671.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"
                   width="20em" height="18em" class="mt-1">
               </div>
-              <div class="block mt-2 font" style="font:small">
-                <span>RIFD님</span>
-                <div style="width: 18em;" class="block scroll">
-                  <p>속옷이 너무 편하고 좋아 대박 이렇게 좋은 속옥은 처음입니다
-                    박학격거세 알에서 나왔다 버거킹은 통새우2
-                  </p>
-                </div>
-                <a class="item-list btn font comment-button" href="#open-moda" style="margin-top: -3em; color:gray">댓글
-                  12개 더보기</a>
-              </div>
-            </div>
-            <!--이미지x 2-->
-          </div>
-
-          <!--댓글창-->
-          <div id="open-moda" class="modal-window" style="text-align: left;">
-            <div>
-              <a href="#modal-close" title="Close" class="modal-close">X</a>
-              <div style="width: 90%; height:60%" class="block scroll font">
-                <span>
-                  <hr>댓글1빠 님</span>
-                <p>
-                  속옷이 너무 편하고 좋아 대박 이렇게 좋은 속옥은 처음입니다
-                  박학격거세 알에서 나왔다 버거킹은 통새우
-                  <hr>
-                </p>
-
-                <form action="" method="GET" onsubmit="false">
-                  <div class="block" style="float: left;">
-                    <textarea class="textarea" placeholder="댓글을 입력하세요." name="comment"></textarea>
-                    <input type="submit" value="게시" class="comment-submit mb-3" />
+              <form action="{% url 'review_create' %}" method="GET">
+                <input type="number" value="{{detail.id}}" name="item_id" style="display: none;" />
+                <div class="block mt-2 font" style="font:small">
+                  <span><input type="text" name="user_id" value="{{userinfo.user_id}}" style="display:none"
+                      class="mb-3"></span>
+                  <div style="width: 45em; height: 6em;" class="block">
+                    <textarea name="contents" placeholder="리뷰내용을 입력하세요."
+                      style="width: 90%; height:6em; resize:none"></textarea><br><br>
+                    <input type="submit" value="작성">
                   </div>
-                </form>
-
-              </div>
+              </form>
             </div>
           </div>
-          <!--댓글창-->
+          <!--리뷰작성-->
         </div>
-      </center>
-      <!--리뷰 창-->
-    </div>
-  </div>
 
-  {%endblock%}
+        <!--댓글창-->
+        <div id="open-moda" class="modal-window" style="text-align: left;">
+          <div>
+            <a href="#modal-close" title="Close" class="modal-close">X</a>
+            <div style="width: 90%; height:60%" class="block scroll font">
+              <span>
+                <hr>댓글1빠 님</span>
+              <p>
+                속옷이 너무 편하고 좋아 대박 이렇게 좋은 속옥은 처음입니다
+                박학격거세 알에서 나왔다 버거킹은 통새우
+                <hr>
+              </p>
+
+              <form action="" method="GET" onsubmit="false">
+                <div class="block" style="float: left;">
+                  <textarea class="textarea" placeholder="댓글을 입력하세요." name="comment"></textarea>
+                  <input type="submit" value="게시" class="comment-submit mb-3" />
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <!--댓글창-->
+    </div>
+    </center>
+
+    <!--리뷰 창-->
+  </div>
+</div>
+
+{%endblock%}
