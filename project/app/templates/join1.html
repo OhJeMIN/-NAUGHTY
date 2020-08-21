@@ -8,13 +8,84 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'login.css'%}">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#nextbtn").click(function(){
+          $("#show1").css("display", "none");  
+          $("#show2").css("display", "block");        
+        });
+
+        $("#leftbtn").click(function(){
+          $("#show2").css("display", "none");  
+          $("#show1").css("display", "block");        
+        });
+      });
+
+  </script>
+
 </head>
 <body>
+
+
+<script type="text/javascript">
+  function writeCheck() {
+    var form = document.writeform;
+    var checks = document.getElementsByClassName('checks');
+
+    if (!form.user_name.value)
+    {
+        alert("아이디를 입력해주세요");
+        form.user_name.focus();
+        return;
+    }
+    if (!form.password1.value) {
+        alert("비밀번호를 입력해주세요");
+        form.password1.focus();
+        return;
+    }
+
+    if (!form.password2.value) {
+      alert("비밀번호를 재입력해주세요");
+      form.password2.focus();
+      return;
+    } 
+
+    if (!form.email.value) {
+        alert("메일을 입력해주세요");
+        form.email.focus();
+        return;
+    }
+
+    if (!form.first_name.value) {
+      alert("닉네임을 입력해주세요");
+      form.first_name.focus();
+      return;
+    }
+
+    /*
+    if (!checks.checked) {
+      alert("개인정보 수집 동의를 체크해주세요");
+      return;
+    }
+    */
+   form.submit();
+}
+</script>
+{% if error %}
+<script type="text/javascript">
+ alert("비밀번호가 일치하지 않습니다");
+</script>
+{% endif %}
+
+<form name="writeform" action="{% url 'join1' %}" method="POST">
+{% csrf_token %} 
 <div class="container-fluid text-center">
     <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
-
+      <div id="show1">
         <div class="card-deck">
             <div class="card p-0" style="border-style:none;">
               <img class="card-img-top" src="https://i.pinimg.com/originals/9c/81/94/9c819476dbb03d411a09a641bd0b4894.jpg" height="350px" alt="Card image cap">    
@@ -24,27 +95,63 @@
                 <span class="card-title mt-4 pl-5 ml-4">Join
                     <small class="mr-4 mt-4 pt-1" style="font-size:14px; float:right;">1/2단계</small>
                 </span>     
-                <form action="{% url 'join2' %}" method="GET">
+                
                     <div>
-                        <input class="input border" type="text" name="id" placeholder="  ID  아이디를 입력하세요">
+                        <input class="input border" type="text" name="user_name" placeholder="  ID  아이디를 입력하세요">
                     </div>
                     <div>
-                        <input class="input border" type="password" name="pw" placeholder="  PW  비밀번호를 입력하세요">
+                        <input class="input border" type="password" name="password1" placeholder="  PW  비밀번호를 입력하세요">
                     </div>
                     <div>
-                        <input class="input border" type="password" name="pw2" placeholder="  PW  비밀번호 확인">
+                        <input class="input border" type="password" name="password2" placeholder="  PW  비밀번호 확인">
                     </div>
                     <div>
-                        <input type="submit" class="btn border" style="line-height:0px; color:white" value="Next">
+                        <input type="button" id="nextbtn" class="btn border" style="line-height:0px; color:white" value="Next">
                     </div>
-                </form>
+                
               </div>
             </div>
             <div class="card p-0" style="border-style:none;">
               <img class="card-img-top" src="https://i.pinimg.com/originals/6a/ad/e6/6aade627b3161a8444bd213cbbfcf3cf.jpg" height="350px" alt="Card image cap">
             </div>
           </div>
+      </div>
 
+      <div id="show2" style="display: none;">
+          <div class="card-deck">
+            <div class="card p-0" style="border-style:none;">
+              <img class="card-img-top" src="https://i.pinimg.com/originals/9c/81/94/9c819476dbb03d411a09a641bd0b4894.jpg" height="350px" width="350px" alt="Card image cap">    
+            </div>
+            <div class="card" style="height: 350px;"> 
+              <div class="card-body">
+                <span class="card-title mt-4 pl-5 ml-4">Join
+                    <small class="mr-4 mt-4 pt-1" style="font-size:14px; float:right;">
+                    <a id="leftbtn" href="#" style="color:snow;"><i class="fa fa-angle-left"></i></a>  
+                    2/2단계</small>
+                </span>     
+                
+                    <div>
+                        <input class="input border" type="text" name="email" placeholder="  MAIL  메일주소를 입력하세요">
+                    </div>
+                    <div>
+                        <input class="input border" type="text" name="first_name" placeholder="  NICKNAME  닉네임을 입력하세요">
+                    </div>
+                    <div class="checks">
+                        <input type="checkbox" name="infomation" id="infocheck">
+                        <label for="infocheck">개인정보 수집 동의</label>
+                    </div>
+                    <div>
+                        <input type="button" class="btn border" style="line-height:0px; color:white" value="WELCOME" OnClick="javascript:writeCheck();">
+                    </div>
+                
+              </div>
+            </div>
+            <div class="card p-0" style="border-style:none;">
+              <img class="card-img-top" src="https://i.pinimg.com/originals/6a/ad/e6/6aade627b3161a8444bd213cbbfcf3cf.jpg" height="350px" width="350px" alt="Card image cap">
+            </div>
+          </div>
+      </div>
 </div>
+</form>
 </body>
 </html>

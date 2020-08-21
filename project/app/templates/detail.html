@@ -18,7 +18,7 @@
 
     /*인풋 텍스트 엔터막기*/
     /*하트 클릭*/
-    
+
     /*하트 클릭*/
     /*팬티사진 넘어가는거*/
     $(document).ready(function () {
@@ -387,6 +387,7 @@
                 <img
                   src="https://imageog.flaticon.com/icons/png/512/99/99671.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF"
                   width="20em" height="18em" class="mt-1">
+                
               </div>
               <div class="block mt-2 font" style="font:small">
                 <span>{{i.user_id}}님</span>
@@ -402,7 +403,7 @@
             {%endif%}
             {% endfor %}
             <!--리뷰작성-->
-            <div class="col-10 block border pl-3 mb-3" style="height: 17em;">
+            <div class="col-10 block border pl-3 mb-3" style="height: 14em;">
               <div class="block mt-2">
                 <span id=heart3><i class="fa fa-heart-o" aria-hidden="true"></i> </span>
                 <img
@@ -412,8 +413,13 @@
               <form action="{% url 'review_create' %}" method="GET">
                 <input type="number" value="{{detail.id}}" name="item_id" style="display: none;" />
                 <div class="block mt-2 font" style="font:small">
-                  <span><input type="text" name="user_id" value="{{userinfo.user_id}}" style="display:none"
-                      class="mb-3"></span>
+                  <span>
+                    {%for i in userinfo.all%}
+                    {%if i.user_id == user_name%}
+                    <input type="text" name="user_id" value="{{first_name}}" style="display:none" class="mb-3">
+                    {%endif%}
+                    {%endfor%}
+                  </span>
                   <div style="width: 45em; height: 6em;" class="block">
                     <textarea name="contents" placeholder="리뷰내용을 입력하세요."
                       style="width: 90%; height:6em; resize:none"></textarea><br><br>
