@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class UserInfo(models.Model):
-    user_id = models.IntegerField()
+    user_id = models.CharField(max_length=100)
     gender = models.BooleanField()
     couple = models.IntegerField()
 

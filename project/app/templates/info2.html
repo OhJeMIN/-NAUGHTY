@@ -10,6 +10,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
     {% load static %}
     <link rel="stylesheet" href="{% static 'login.css'%}">
+    <style>
+        label {
+            border:solid 1px;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+            width: 30%;
+            height: 30px;
+            background-color: black;
+            line-height:20px;
+            color:snow;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid text-center">
@@ -19,13 +33,13 @@
             <div class="card" style="height: 350px;">
                 <div class="card-body">
                     <div class="card-text">
-                        <form action="{% url 'info3' %}" method="GET">
+                        <form action="/infocoupleud/{{userinfo.id}}" method="GET">
                             <div class="card-text2">
                                 <h4>당신은 커플입니까?</h4>
                             </div>
                             <div>
-                                <input type="submit" name="couple" id="yes"class="btninfo border" style="line-height:0px; color:white" value="YES">
-                                <input type="submit" name="couple" id="no"class="btninfo border" style="line-height:0px; color:white" value="NO">
+                                <input type="submit" name="couple" id="yes"class="btninfo border" style="line-height:0px; color:white; display: none;" value="0"><label for="yes">YES</label>
+                                <input type="submit" name="couple" id="no"class="btninfo border" style="line-height:0px; color:white; display: none;" value="1"><label for="no">NO</label>
                             </div>
                         </form>
                     </div>
