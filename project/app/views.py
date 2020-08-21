@@ -1,17 +1,22 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import UserInfo,Review,Comment,Item
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
-def item(request):
-    return render(request, 'item.html')
+def item(request, id):
+    item = Item.objects.filter(gender = id)
+    print(item)
+    return render(request, 'item.html', {'arr':item})
 
 def item1(request):
-    return render(request, 'item1.html')
+    item1 = Item.objects.filter(gender__in = [1,2,3])
+    return render(request, 'item1.html', {'arr': item1})
 
 def item2(request):
-    return render(request, 'item2.html')
+    item2 = Item.objects.filter(gender = 3)
+    print(item2)
+    return render(request, 'item2.html', {'arr':item2})
 
 def login(request):
     return render(request, 'login.html')
