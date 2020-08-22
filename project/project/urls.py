@@ -44,7 +44,7 @@ urlpatterns = [
     path('survey/<int:userinfo_id>', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
-    path('loading', app.views.loding, name='loading'),
+    path('loading', app.views.loading, name='loading'),
     path('change_order', app.views.chanege_order, name='change_order'),
     path('review_create', app.views.review_create, name='review_create'),
     

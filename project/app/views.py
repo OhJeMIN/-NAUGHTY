@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.models import User
-from django.contrib import auth
-from .models import UserInfo,Review,Comment,Item
-=======
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import UserInfo,Review,Comment,Item
 from django.contrib.auth.models import User
 from django.contrib import auth
->>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5
 
 # Create your views here.
 def index(request):
@@ -113,12 +106,6 @@ def detail(request, id):
 
 def loading(request):
     return render(request, 'loading.html')
-<<<<<<< HEAD
-=======
-
-def loding(request):
-    return render(request, 'loding.html')
->>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5
 
 def chanege_order(request):
     return redirect('/order')
@@ -164,7 +151,3 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
-<<<<<<< HEAD
-=======
-
->>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5
