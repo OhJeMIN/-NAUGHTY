@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import UserInfo,Review,Comment,Item
-=======
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
-from .models import UserInfo
+from .models import UserInfo,Review,Comment,Item
 
->>>>>>> 2589996db1a0f4544b563d21458adde57a308a53
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -103,12 +98,8 @@ def order(request):
 def detail(request):
     return render(request, 'detail.html')
 
-<<<<<<< HEAD
 def loading(request):
     return render(request, 'loading.html')
-=======
-def loding(request):
-    return render(request, 'loding.html')
 
 # 로그인하고 나서 마이페이지 가는 순간 userinfo 만들기
 def infocreate(request):
@@ -143,4 +134,3 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
->>>>>>> 2589996db1a0f4544b563d21458adde57a308a53
