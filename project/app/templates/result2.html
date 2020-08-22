@@ -18,22 +18,11 @@
             $("a#down").click(function(){
             switch($(".test").text()){
                 case "1":
-                $("#show2").css("display", "block");
+                $("#show4").css("display", "block");
                 $("#show1").css("display", "none");
                 $("a#up").css("visibility", "visible");
-                $(".test").text("2");  
-                break;
-                case "2":
-                $("a#up").css("visibility", "visible"); 
-                $("#show3").css("display", "block");
-                $("#show2").css("display", "none");
-                $(".test").text("3");
-                break;
-                case "3": 
-                $("#show4").css("display", "block");
-                $("#show3").css("display", "none");
                 $("a#down").css("visibility", "hidden");
-                $(".test").text("4");
+                $(".test").text("2");  
                 break;
             }
             });
@@ -42,20 +31,10 @@
                 switch($(".test").text()){
                     case "2": 
                     $("#show1").css("display", "block");
-                    $("#show2").css("display", "none");
-                    $("a#up").css("visibility", "hidden");
-                    $(".test").text("1");
-                    break;
-                    case "3": 
-                    $("#show2").css("display", "block");
-                    $("#show3").css("display", "none");
-                    $(".test").text("2");
-                    break;
-                    case "4": 
-                    $("#show3").css("display", "block");
                     $("#show4").css("display", "none");
+                    $("a#up").css("visibility", "hidden");
                     $("a#down").css("visibility", "visible");
-                    $(".test").text("3");
+                    $(".test").text("1");
                     break;
                 }
                 });
@@ -64,20 +43,20 @@
     </script>
     <script type="text/javascript">
         var txtArray = [
-        "전통과 보수의 섹스 수구 세력",
-        "기복 없이 이타적인 성실한 관계지향가",
-        "정신적 연결고리가 중요한 침대 위의 철학자",
-        "쾌감에 최적화된 루트를 빌드업하는 전략가",
-        "모양과 색깔을 중시하는 진정한 탐미주의자",
-        "여러모로 천국을 보여 줄 선량한 인도주의자",
-        "무드를 중시하는 문과형 로맨티스트",
-        "지성을 바탕으로 섹스어필을 느끼는 인텔리 페티시즘",
-        "새롭고 신선한 섹스에 열망이 많은 어드벤쳐",
-        "퇴폐미 가득한 섹스를 추구하는 마인드 컨트롤러 ",
-        "최상의 섹스를 위해 리더십을 발휘하는 지휘자 유형",
-        "사랑과 애정을 주고받는 데 능숙한 섹스 요정",
-        "신념과 가치관 일치를 중시하는 침대 위의 사상가",
-        "카리스마와 자신감으로 잠자리를 통솔하는 정복자",
+        `"전통과 보수의 섹스 수구 세력"`,
+        `"기복 없이 이타적인 성실한 관계지향가"`,
+        `"정신적 연결고리가 중요한 침대 위의 철학자"`,
+        `"쾌감에 최적화된 루트를 빌드업하는 전략가"`,
+        `"모양과 색깔을 중시하는 진정한 탐미주의자"`,
+        `"여러모로 천국을 보여 줄 선량한 인도주의자"`,
+        `"무드를 중시하는 문과형 로맨티스트"`,
+        `"지성을 바탕으로 섹스어필을 느끼는 인텔리 페티시즘"`,
+        `"새롭고 신선한 섹스에 열망이 많은 어드벤쳐"`,
+        `"퇴폐미 가득한 섹스를 추구하는 마인드 컨트롤러"`,
+        `"최상의 섹스를 위해 리더십을 발휘하는 지휘자 유형"`,
+        `"사랑과 애정을 주고받는 데 능숙한 섹스 요정"`,
+        `"신념과 가치관 일치를 중시하는 침대 위의 사상가"`,
+        `"카리스마와 자신감으로 잠자리를 통솔하는 정복자"`
         ];
         
         function showTitle(){
@@ -95,7 +74,7 @@
         <p class="test" style="margin:auto; color:snow; display: none;">1</p>
         <p class="result-txt" style="height: fit-content;">연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.</p>
         <div class="card-border" id="show1" style="display: block;">
-            <h5 class="titletxt mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <h5 class="titletxt mb-4"><b></b></h5>
             <div class="card-deck row">
                 <a href="#" class="result-button" id="up" style="visibility: hidden;">
                     <div><i class="fa fa-angle-up fa-4x"></i></div>
@@ -116,7 +95,7 @@
             </div>
         </div>
         <div class="card-border" id="show2" style="display: none;">
-            <h5 class="titletxt mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <h5 class="titletxt mb-4"><b></b></h5>
             <div class="card-deck">
                 <a href="#" class="result-button" id="up">
                     <div><i class="fa fa-angle-up fa-4x"></i></div>
@@ -136,7 +115,7 @@
             </div>
         </div>
         <div class="card-border" id="show3" style="display: none;">
-            <h5 class="titletxt mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <h5 class="titletxt mb-4"><b></b></h5>
             <div class="card-deck">
                 <a href="#" class="result-button" id="up">
                     <div><i class="fa fa-angle-up fa-4x"></i></div>
@@ -156,7 +135,7 @@
             </div>
         </div>
         <div class="card-border" id="show4" style="display: none;">
-            <h5 class="titletxt mb-4"><b>"매 순간이 새롭고 섹시한 침대위의 팔색조"</b></h5>
+            <h5 class="titletxt mb-4"><b></b></h5>
             <div class="card-deck">
                 <a href="#" class="result-button" id="up">
                     <div><i class="fa fa-angle-up fa-4x"></i></div>
