@@ -107,9 +107,6 @@ def detail(request, id):
 def loading(request):
     return render(request, 'loading.html')
 
-def loding(request):
-    return render(request, 'loding.html')
-
 def chanege_order(request):
     return redirect('/order')
 
@@ -154,4 +151,3 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
-
