@@ -79,3 +79,11 @@ span:hover{
     left: 13vh
     
 }
+.scroll{
+    height: 10em;
+    width: 22em;
+    overflow: auto;
+}
+.scroll::-webkit-scrollbar{
+    background-color: white;
+}

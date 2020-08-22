@@ -3,7 +3,7 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
-<script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
+<script src="{% static '커플뷰2.jpg' %}" crossorigin="anonymous"></script>
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
@@ -43,10 +43,10 @@
     </div>
 </div>
 <div class="container-fluid mt-5 bg-light">
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="scroll row row-cols-1 row-cols-md-2">
         {%for i in arr%}
         <div class="col p-1">
-            <a href="/detail/3">
+            <a href="/detail/{{i.id}}">
                 <div class="card border-0 rounded-0">
                     <img src="{{i.main_img.url}}" class="card-img-top" alt="...">
                     <div class="card-body text-center">
