@@ -27,7 +27,7 @@
 
 </style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
-<script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
+<script src="{% static '커플뷰3.jpg' %}" crossorigin="anonymous"></script>
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
@@ -67,7 +67,7 @@
     </div>
 </div>
 <div class="container mt-5 bg-light">
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="scroll row row-cols-1 row-cols-md-3">
         {%for i in arr%}
         {%if i.gender == 3%}
         <a href="/detail/{{i.id}}">

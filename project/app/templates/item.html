@@ -27,29 +27,21 @@
 
 </style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
-<script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
+{%if i.gender == 1%}
+<script src="{% static '남자뷰.jpg' %}" crossorigin="anonymous"></script>
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
-        <!--
-        <div class="row card-img-overlay justify-content-center">
-            <div class="down col-md-auto">
-                <div class="row mt-5 text-white">
-                    I remember when, mom used to say
-                </div>
-                <div class="row mb-3 text-white">
-                    That things are getting better
-                </div>
-                <div class="row text-dark">
-                    div.col 엔터 누르면 div class="col 나옴 점이 class이다 #은 아이디"
-                    <div class="col-5"><a href="/" class="button1 m-0 btn-block btn text-white">view</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
     </div>
 </div>
+{%else%}
+<script src="{% static '여자뷰.jpg' %}" crossorigin="anonymous"></script>
+<div class="container-fluid">
+    <div class="card bg-dark text-white">
+        <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
+    </div>
+</div>
+{%endif%}
 <div class="container mt-5" style="text-align: center;">
     <div class="row justify-content-center">
         <form action="/" , method="GET" class="col-3 p-0" style="border-bottom: 1px solid black; ">
@@ -67,11 +59,11 @@
     </div>
 </div>
 <div class="container mt-5 bg-light">
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="scroll row row-cols-1 row-cols-md-3">
         {%for i in arr%}
         <div class="col mb-4">
             <a href="/detail/{{i.id}}">
-                <div class="image card border-0 rounded-0">
+                <div class="image card border-0 rounded-0 ">
                     <img src="{{i.main_img.url}}"
                         class="card-img-top" alt="..." href="/detail">
                     <div class="show">
