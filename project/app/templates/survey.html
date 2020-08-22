@@ -52,6 +52,23 @@
         });
 
     </script>
+    <style>
+        label {
+            border-radius: 10px;
+            margin: 90px 10px;
+            padding: 0 20px;
+            width: max-content;
+            height: 50px;
+            background-color: black;
+            border-style: solid;
+            border-color: snow;
+            color:snow;
+            font-family:'YDIYGO310'; 
+            line-height: 50px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <form action="{% url 'result2' %}" method="GET">
@@ -294,10 +311,12 @@
             <p class="question">Q. 당신은 데이트할때 어떤 스타일입니까?</p>
             <div class="row2">
                 <a href="#">
-                    <button class="btn7" type="submit" style="color:snow;">A. 먼저 제안하고 리드하는 편입니다.</button>
+                    <input class="btn7" name="sexy" id="A" type="submit" style="color:snow; display:none;" vaule="섹시">
+                    <label for="A">A. 먼저 제안하고 리드하는 편입니다.</label>
                 </a>
                 <a href="#">
-                    <button class="btn7" type="submit" style="color:snow;">B. 상대방이 원하는 걸 맞춰주는 편입니다.</button>
+                    <input class="btn7" name="sexy" id="B" type="submit" style="color:snow; display:none;" vaule="논섹시">
+                    <label for="B">B. 상대방이 원하는 걸 맞춰주는 편입니다.</label>
                 </a>
             </div>
         </div>
