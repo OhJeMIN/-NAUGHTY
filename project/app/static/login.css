@@ -142,16 +142,3 @@ a:hover { color: black; text-decoration: none;}
     width: 70%;
     margin:auto;
 }
-
-label {
-    border:solid 1px;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
-    width: 30%;
-    height: 30px;
-    background-color: black;
-    line-height:20px;
-    color:snow;
-    cursor: pointer;
-}

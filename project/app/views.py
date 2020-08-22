@@ -28,6 +28,7 @@ def login(request):
                 return render(request, 'login.html', {'error': 'username or password is incorrect.'})
     else:
         return render(request, 'login.html')
+    return render(request, 'login.html')
 
 def logout(request):
     #if request.method == 'POST':
@@ -75,8 +76,9 @@ def result1(request):
 def result2(request):
     return render(request, 'result2.html')
 
-def survey(request):
-    return render(request, 'survey.html')
+def survey(request, userinfo_id):
+    userinfo = get_object_or_404(UserInfo, pk=userinfo_id)
+    return render(request, 'survey.html',{'userinfo':userinfo})
     
 def mypage(request, userinfo_id):
     #userinfo = UserInfo.objects.filter(user_id=User.objects.get(username = request.user.get_username()))
