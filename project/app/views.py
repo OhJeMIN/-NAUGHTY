@@ -78,7 +78,64 @@ def info5(request, userinfo_id):
 def result1(request):
     return render(request, 'result1.html')
 
-def result2(request):
+def result2(request, userinfo_id):
+    userinfo = get_object_or_404(UserInfo, pk=userinfo_id)
+    if request.GET['type'] == "sexy":
+         # 남자 솔로
+        if userinfo.couple == 1 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 솔로
+        if userinfo.couple == 1 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남남
+        if userinfo.couple == 2 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 3, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 여여
+        if userinfo.couple == 4 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 3, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+
+        item = Item.objects.filter(types = '섹시')
+        return render(request, 'result2.html', {'arr':item})
+    else:
+         # 남자 솔로
+        if userinfo.couple == 1 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 솔로
+        if userinfo.couple == 1 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남남
+        if userinfo.couple == 2 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 3).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 여여
+        if userinfo.couple == 4 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 3).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+
+        item = Item.objects.all().exclude(types = '섹시')
+        return render(request, 'result2.html', {'arr':item})
     return render(request, 'result2.html')
 
 def survey(request, userinfo_id):
@@ -102,7 +159,6 @@ def detail(request, id):
     review = Review.objects
     userinfo = UserInfo.objects
     return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
-
 
 def loading(request):
     return render(request, 'loading.html')

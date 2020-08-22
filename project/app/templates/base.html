@@ -16,7 +16,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <ul id="main-menu">
-                <li><a class="dropdown-item" href="#">WOMAN</a>
+                <li><a class="dropdown-item" href="/item/2">WOMAN</a>
                     <ul class="sub-menu" id="woman-menu">
                         <li><a class="sub-menu-text" href="#">ALL</a></li>
                         <li><a class="sub-menu-text" href="#">SET</a></li>
@@ -24,14 +24,14 @@
                         <li><a class="sub-menu-text" href="#" style="border-bottom:none;">PANTIES</a></li>
                     </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">MAN</a>
+                <li><a class="dropdown-item" href="/item/1">MAN</a>
                     <ul class="sub-menu" id="man-menu">
                         <li><a class="sub-menu-text" href="#">ALL</a></li>
                         <li><a class="sub-menu-text" href="#">TRUNKS</a></li>
                         <li><a class="sub-menu-text" href="#" style="border-bottom:none;">BRIEFS</a></li>
                     </ul>
                 </li>
-                <li><a class="dropdown-item" href="#" style="border-bottom:none;">COUPLE</a>
+                <li><a class="dropdown-item" href="/item/3" style="border-bottom:none;">COUPLE</a>
                     <ul class="sub-menu" id="all-menu">
                         <li><a class="sub-menu-text" href="#" style="border-top: 1px solid #6E6E6E;">ALL</a></li>
                         <li><a class="sub-menu-text" href="#">WOMAN</a>
@@ -63,7 +63,7 @@
             
             {% csrf_token %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'infocreate' %}">환영합니다. {{ user.first_name }} 님!</a>
+                <a class="nav-link" href="{% url 'infocreate' %}">환영합니다. {{ user.first_name }}님!</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'logout' %}"> 로그아웃</a>  
