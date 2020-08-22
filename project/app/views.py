@@ -106,6 +106,12 @@ def detail(request, id):
 
 def loading(request):
     return render(request, 'loading.html')
+<<<<<<< HEAD
+=======
+
+def loding(request):
+    return render(request, 'loding.html')
+>>>>>>> a2e43c8b2b12040afea237fc1676cc155378b676
 
 def chanege_order(request):
     return redirect('/order')
