@@ -146,15 +146,15 @@ img { border:none; vertical-align:top;}
     width: 130px; height: 150px;
     margin-left: 10px; margin-right: 10px;
 }
-.carousel .view .list > li ul li.a1{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a2{margin:0px;padding:0px; background-image: url(https://www.6n7.com/shopimages/junenjuly/151001000056.jpg?1594784020); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a3{margin:0px;padding:0px; background-image: url(https://image.auction.co.kr/itemimage/19/c6/0e/19c60e3056.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a4{margin:0px;padding:0px; background-image: url(https://pbs.twimg.com/media/EEPbMUyVAAA9oOs.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a5{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a6{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/d006f111-ce8e-4537-99dc-155c9eeaf695.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a7{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a8{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
-.carousel .view .list > li ul li.a9{margin:0px;padding:0px; background-image: url(https://pds.joins.com/news/component/htmlphoto_mmdata/201705/24/96725a66-3722-4b6c-93e1-11f6ba1280b3.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a1{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/m1BRN1Bh/NB1385-5-RX-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a2{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/9wb2xXQb/NB1906-VN8-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a3{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/G9CsSMpT/NB1932-BA5-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a4{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/5jSFcwH7/NB1932-FH7-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a5{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/mtZ1TtCb/NB1992-001-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a6{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/k2BVtzTz/NB1992-3-YQ-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a7{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/DSHSQ6DZ/NB2225-LP3-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a8{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/7CzfK78N/NB2225-SP6-ITEM-1.jpg); background-size: 100% 100%;} 
+.carousel .view .list > li ul li.a9{margin:0px;padding:0px; background-image: url(https://i.postimg.cc/tZH7wT9G/NB2418-SM2-ITEM-1.jpg); background-size: 100% 100%;} 
 
 .carousel .prev{
     margin:0px;padding:0px;
@@ -324,4 +324,12 @@ img { border:none; vertical-align:top;}
     margin-top: -3em;
     padding-left:0em;
     color:gray;
+}
+.scroll-review{
+    height: 12em;
+    width: 22em;
+    overflow: auto;
+}
+.scroll-review::-webkit-scrollbar{
+    background-color: white;
 }

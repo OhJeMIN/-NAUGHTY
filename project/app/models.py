@@ -9,7 +9,7 @@ class UserInfo(models.Model):
 
 class Review(models.Model):
     item_id = models.IntegerField()
-    user_id = models.IntegerField()
+    user_id = models.TextField()
     contents = models.TextField()
 
 class Comment(models.Model):

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import auth
 from .models import UserInfo,Review,Comment,Item
+=======
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import UserInfo,Review,Comment,Item
+from django.contrib.auth.models import User
+from django.contrib import auth
+>>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5
 
 # Create your views here.
 def index(request):
@@ -33,6 +40,7 @@ def login(request):
                 return render(request, 'login.html', {'error': 'username or password is incorrect.'})
     else:
         return render(request, 'login.html')
+    return render(request, 'login.html')
 
 def logout(request):
     #if request.method == 'POST':
@@ -80,8 +88,9 @@ def result1(request):
 def result2(request):
     return render(request, 'result2.html')
 
-def survey(request):
-    return render(request, 'survey.html')
+def survey(request, userinfo_id):
+    userinfo = get_object_or_404(UserInfo, pk=userinfo_id)
+    return render(request, 'survey.html',{'userinfo':userinfo})
     
 def mypage(request, userinfo_id):
     #userinfo = UserInfo.objects.filter(user_id=User.objects.get(username = request.user.get_username()))
@@ -95,11 +104,32 @@ def goinfo(request, userinfo_id):
 def order(request):
     return render(request, 'order.html')
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request, id):
+    detail = get_object_or_404(Item, pk=id)
+    review = Review.objects
+    userinfo = UserInfo.objects
+    return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
+
 
 def loading(request):
     return render(request, 'loading.html')
+<<<<<<< HEAD
+=======
+
+def loding(request):
+    return render(request, 'loding.html')
+>>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5
+
+def chanege_order(request):
+    return redirect('/order')
+
+def review_create(request):
+    cr = Review()
+    cr.user_id = User.objects.get(username = request.user.get_username())
+    cr.contents = request.GET['contents']
+    cr.item_id = request.GET['item_id']
+    cr.save()
+    return redirect('/detail/'+str(cr.item_id))
 
 # 로그인하고 나서 마이페이지 가는 순간 userinfo 만들기
 def infocreate(request):
@@ -134,3 +164,7 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
+<<<<<<< HEAD
+=======
+
+>>>>>>> eccb2bc6f7a1a909c5827b59d1a9906998470fa5

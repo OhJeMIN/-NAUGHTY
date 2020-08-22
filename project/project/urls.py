@@ -28,7 +28,7 @@ urlpatterns = [
     path('logout', app.views.logout, name='logout'),
     path('mypage/<int:userinfo_id>', app.views.mypage, name = 'mypage'),
     path('order', app.views.order, name='order'),
-    path('detail', app.views.detail, name='detail'),
+    path('detail/<int:id>', app.views.detail, name='detail'),
     path('join1', app.views.join1, name='join1'),
     path('join2', app.views.join2, name='join2'),
     path('info1/<int:userinfo_id>', app.views.info1, name='info1'),
@@ -41,9 +41,13 @@ urlpatterns = [
     path('infogenderud/<int:userinfo_id>', app.views.infogenderud, name='infogenderud'),
     path('infocoupleud/<int:userinfo_id>', app.views.infocoupleud, name='infocoupleud'),
     path('infotypeud/<int:userinfo_id>', app.views.infotypeud, name='infotypeud'),
-    path('survey', app.views.survey, name='survey'),
+    path('survey/<int:userinfo_id>', app.views.survey, name='survey'),
     path('result1', app.views.result1, name='result1'),
     path('result2', app.views.result2, name='result2'),
+    path('loading', app.views.loding, name='loading'),
+    path('change_order', app.views.chanege_order, name='change_order'),
+    path('review_create', app.views.review_create, name='review_create'),
+    
     path('loading', app.views.loading, name='loading')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
