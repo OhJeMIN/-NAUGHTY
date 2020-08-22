@@ -31,12 +31,18 @@ body{
     margin-right:0;
 }
 
-.row{
+.row1 {
     background-color: #000000;
-    height: 70%;
+    height: 70vh;
     font-family:'YDIYGO340'; 
     color:snow;
 }
+
+
+.row {
+    justify-content: center;
+}
+
 
 .card-deck{
     width:100%;
@@ -53,8 +59,7 @@ body{
     border-style: solid;
     border-color: snow;
     border-radius: 10px;
-    margin:0 auto;
-    margin-top:0;
+    margin:5px auto;
     padding:40px 10px;
 }
 
@@ -62,6 +67,7 @@ body{
     text-align: center;
     margin: 1%;
     padding: 1%;
+    width: 200px;
     height:200px;
     color: snow;
     background-color: #000000;
@@ -82,7 +88,9 @@ a:hover { color: snow; text-decoration: none;}
 
 /*연인에게 선물할 당신의 속옷취향 결과가 나왔습니다.*/
 .result-txt {
-    margin:auto;
+    margin:0 auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
     font-size:20px;
     font-family:'YDIYGO310';
 }

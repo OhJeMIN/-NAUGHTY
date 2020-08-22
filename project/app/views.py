@@ -1,20 +1,25 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import UserInfo,Review,Comment,Item
 from django.contrib.auth.models import User
 from django.contrib import auth
-from .models import UserInfo
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
-def item(request):
-    return render(request, 'item.html')
+def item(request, id):
+    item = Item.objects.filter(gender = id)
+    print(item)
+    return render(request, 'item.html', {'arr':item})
 
 def item1(request):
-    return render(request, 'item1.html')
+    item1 = Item.objects.filter(gender__in = [1,2,3])
+    return render(request, 'item1.html', {'arr': item1})
 
 def item2(request):
-    return render(request, 'item2.html')
+    item2 = Item.objects.filter(gender = 3)
+    print(item2)
+    return render(request, 'item2.html', {'arr':item2})
 
 def login(request):
     if request.method == 'POST':
@@ -92,11 +97,29 @@ def goinfo(request, userinfo_id):
 def order(request):
     return render(request, 'order.html')
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request, id):
+    detail = get_object_or_404(Item, pk=id)
+    review = Review.objects
+    userinfo = UserInfo.objects
+    return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
+
+
+def loading(request):
+    return render(request, 'loading.html')
 
 def loding(request):
     return render(request, 'loding.html')
+
+def chanege_order(request):
+    return redirect('/order')
+
+def review_create(request):
+    cr = Review()
+    cr.user_id = User.objects.get(username = request.user.get_username())
+    cr.contents = request.GET['contents']
+    cr.item_id = request.GET['item_id']
+    cr.save()
+    return redirect('/detail/'+str(cr.item_id))
 
 # 로그인하고 나서 마이페이지 가는 순간 userinfo 만들기
 def infocreate(request):
@@ -131,3 +154,4 @@ def infotypeud(request, userinfo_id):
     userinfo.couple = request.GET['couple']
     userinfo.save()
     return redirect('/info4/'+str(userinfo_id))
+
