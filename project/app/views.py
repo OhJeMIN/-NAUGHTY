@@ -7,11 +7,14 @@ from django.contrib import auth
 def index(request):
     return render(request, 'index.html')
 
+def search(request):
+    search = request.GET['search']
+    search1 = Item.objects.filter(name__icontains=search)
+    return render(request, 'item.html', {'arr':search1})
+
 def item(request, id):
     item = Item.objects.filter(gender = id)
-    item1 = Item.objects.filter(gender = id)
-    print(item)
-    return render(request, 'item.html', {'arr':item , 'x' : item1})
+    return render(request, 'item.html', {'arr':item , 'item1' : id })
 
 def item1(request):
     item1 = Item.objects.filter(gender__in = [1,2,3])
@@ -19,7 +22,6 @@ def item1(request):
 
 def item2(request):
     item2 = Item.objects.filter(gender = 3)
-    print(item2)
     return render(request, 'item2.html', {'arr':item2})
 
 def login(request):
@@ -79,7 +81,64 @@ def info5(request, userinfo_id):
 def result1(request):
     return render(request, 'result1.html')
 
-def result2(request):
+def result2(request, userinfo_id):
+    userinfo = get_object_or_404(UserInfo, pk=userinfo_id)
+    if request.GET['type'] == "sexy":
+         # 남자 솔로
+        if userinfo.couple == 1 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 솔로
+        if userinfo.couple == 1 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남남
+        if userinfo.couple == 2 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 3, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 여여
+        if userinfo.couple == 4 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 3, types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+
+        item = Item.objects.filter(types = '섹시')
+        return render(request, 'result2.html', {'arr':item})
+    else:
+         # 남자 솔로
+        if userinfo.couple == 1 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 솔로
+        if userinfo.couple == 1 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남남
+        if userinfo.couple == 2 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 1).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 남자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == True:
+            item = Item.objects.filter(gender = 3).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 여여
+        if userinfo.couple == 4 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 2).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+        # 여자 커플 남녀
+        if userinfo.couple == 3 and userinfo.gender == False:
+            item = Item.objects.filter(gender = 3).exclude(types = '섹시')
+            return render(request, 'result2.html', {'arr':item})
+
+        item = Item.objects.all().exclude(types = '섹시')
+        return render(request, 'result2.html', {'arr':item})
     return render(request, 'result2.html')
 
 def survey(request, userinfo_id):
@@ -103,7 +162,6 @@ def detail(request, id):
     review = Review.objects
     userinfo = UserInfo.objects
     return render(request, 'detail.html',{'detail':detail, 'review':review, 'userinfo':userinfo})
-
 
 def loading(request):
     return render(request, 'loading.html')

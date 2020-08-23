@@ -71,7 +71,7 @@
     </style>
 </head>
 <body>
-<form action="{% url 'result2' %}" method="GET">
+<form action="/result2/{{userinfo.id}}" method="GET">
 <div class="container-fluid text-center">
     <div><a href="{% url 'index' %}"><span class="brand-txt">NAUGHTY</span></a></div>
     <p class="test" style="margin:auto; color:snow; display:none;">1</p>
@@ -311,11 +311,11 @@
             <p class="question">Q. 당신은 데이트할때 어떤 스타일입니까?</p>
             <div class="row2">
                 <a href="#">
-                    <input class="btn7" name="sexy" id="A" type="submit" style="color:snow; display:none;" vaule="섹시">
+                    <input class="btn7" name="type" id="A" type="submit" style="color:snow; display:none;" value="sexy">
                     <label for="A">A. 먼저 제안하고 리드하는 편입니다.</label>
                 </a>
                 <a href="#">
-                    <input class="btn7" name="sexy" id="B" type="submit" style="color:snow; display:none;" vaule="논섹시">
+                    <input class="btn7" name="type" id="B" type="submit" style="color:snow; display:none;" value="nonsexy">
                     <label for="B">B. 상대방이 원하는 걸 맞춰주는 편입니다.</label>
                 </a>
             </div>

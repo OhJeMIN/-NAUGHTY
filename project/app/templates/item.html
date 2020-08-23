@@ -28,14 +28,13 @@
 </style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
 <script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
-{%if i.gender == 1%}
-<script src="{% static '남자뷰.jpg' %}" crossorigin="anonymous"></script>
+{%if item1 == 1%}
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="{% static '남자뷰.jpg' %}" class="card-img" alt="...">
     </div>
 </div>
-{%elif i.gender == 2%}
+{%elif item1 == 2%}
 <div class="container-fluid">
     <div class="card bg-dark text-white">
         <img src="{% static '여자뷰.jpg' %}" class="card-img" alt="...">
@@ -44,8 +43,8 @@
 {%endif%}
 <div class="container mt-5" style="text-align: center;">
     <div class="row justify-content-center">
-        <form action="/" , method="GET" class="col-3 p-0" style="border-bottom: 1px solid black; ">
-            <input type="text" class="search2 border-0">
+        <form action="/search" , method="GET" class="col-3 p-0" style="border-bottom: 1px solid black; ">
+            <input type="text" class="search2 border-0" name = "search">
             <button class="search bg-white border-0 p-0"><i class="fas fa-search"></i></button>
         </form>
     </div>
@@ -59,13 +58,13 @@
     </div>
 </div>
 <div class="container mt-5 bg-light">
-    <div class="scroll row row-cols-1 row-cols-md-3">
+    <div class="row row-cols-1 row-cols-md-3">
         {%for i in arr%}
         <div class="col mb-4">
             <a href="/detail/{{i.id}}">
                 <div class="image card border-0 rounded-0 ">
                     <img src="{{i.main_img.url}}"
-                        class="card-img-top" alt="..." href="/detail">
+                        class="card-img-top" alt="..." href="/detail" style="height: 50vh;">
                     <div class="show">
                         <div class="card rounded-0 hoverCard border-0">
                             <div class="row d-flex justify-content-center">

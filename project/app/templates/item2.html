@@ -6,13 +6,13 @@
 <script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
 <div class="container-fluid">
     <div class="card bg-dark text-white">
-        <img src="{% static '커플뷰2.jpg' %}" class="card-img" alt="...">
+        <img src="{% static '커플뷰.jpg' %}" class="card-img" alt="...">
     </div>
 </div>
 <div class="container mt-5" style="text-align: center;">
     <div class="row justify-content-center">
-        <form action="/" , method="GET" class="col-3 p-0" style="border-bottom: 1px solid black; ">
-            <input type="text" class="search2 border-0">
+        <form action="/search" , method="GET" class="col-3 p-0" style="border-bottom: 1px solid black; ">
+            <input type="text" class="search2 border-0" name="search">
             <button class="search bg-white border-0 p-0"><i class="fas fa-search"></i></button>
         </form>
     </div>
@@ -26,12 +26,12 @@
     </div>
 </div>
 <div class="container-fluid mt-5 bg-light">
-    <div class="scroll row row-cols-1 row-cols-md-2">
+    <div class="row row-cols-1 row-cols-md-2">
         {%for i in arr%}
         <div class="col p-1">
             <a href="/detail/{{i.id}}">
                 <div class="card border-0 rounded-0">
-                    <img src="{{i.main_img.url}}" class="card-img-top" alt="...">
+                    <img src="{{i.main_img.url}}" class="card-img-top" alt="..." style="height: 50vh;">
                     <div class="card-body text-center">
                         <p>{{i.name}}</p>
                         <p>&#8361;{{i.price}}</p>
