@@ -9,8 +9,9 @@ def index(request):
 
 def item(request, id):
     item = Item.objects.filter(gender = id)
+    item1 = Item.objects.filter(gender = id)
     print(item)
-    return render(request, 'item.html', {'arr':item})
+    return render(request, 'item.html', {'arr':item , 'x' : item1})
 
 def item1(request):
     item1 = Item.objects.filter(gender__in = [1,2,3])

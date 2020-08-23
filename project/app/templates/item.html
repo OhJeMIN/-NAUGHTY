@@ -27,18 +27,18 @@
 
 </style>
 <link rel="stylesheet" href="{% static 'jemin.css'%}">
+<script src="https://kit.fontawesome.com/dbe26b9685.js" crossorigin="anonymous"></script>
 {%if i.gender == 1%}
 <script src="{% static '남자뷰.jpg' %}" crossorigin="anonymous"></script>
 <div class="container-fluid">
     <div class="card bg-dark text-white">
-        <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
+        <img src="{% static '남자뷰.jpg' %}" class="card-img" alt="...">
     </div>
 </div>
-{%else%}
-<script src="{% static '여자뷰.jpg' %}" crossorigin="anonymous"></script>
+{%elif i.gender == 2%}
 <div class="container-fluid">
     <div class="card bg-dark text-white">
-        <img src="http://kyuhoon3.img15.kr/201604/cate/sexy_cate.jpg" class="card-img" alt="...">
+        <img src="{% static '여자뷰.jpg' %}" class="card-img" alt="...">
     </div>
 </div>
 {%endif%}
