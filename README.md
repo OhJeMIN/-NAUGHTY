@@ -1,14 +1,15 @@
 # -NAUGHTY
-#####커플 속옷 서비스
+##### 커플 속옷 서비스
 
-###사용 기술
+### 사용 기술
 ```
 python3
 Django
 html css jquery bootstrap
 ```
 
-###🦁멋쟁이 사자처럼 가천대학교🦁
+### 🦁멋쟁이 사자처럼 가천대학교🦁
+
 [문서희](https://github.com/MunSeoHee)
 [오제민](https://github.com/jasonoh22)
 [홍인표](https://github.com/Inpyo-Hong)
